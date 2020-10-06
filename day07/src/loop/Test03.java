@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Test03 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		/*
 		for(int i=10; i>=0; i--) {
 			System.out.println(i);
@@ -17,6 +17,7 @@ public class Test03 {
 		int a=scan.nextInt();
 		for(int i=a; i>=0; i--) {
 			System.out.println(i);
+			Thread.sleep(1000L);//1000밀리초(1초) 휴식!
 		}
 
 	}
