@@ -1,17 +1,17 @@
 
-//È¦¼ö Ãâ·Â
+//í™€ìˆ˜ ì¶œë ¥
 
 package loop;
 
 public class Test04 {
 
 	public static void main(String[] args) {
-		/*¼º´ÉÀº ´õ ÁÁ´Ù
+		/*ì„±ëŠ¥ì€ ë” ì¢‹ë‹¤
 		for(int i=1; i<11; i+=2) {
 			System.out.println(i);
 		}
 		*/
-		//»ç¿ëÀÚ°¡ »ç¿ëÇÏ±â ´õ ÆíÇÔ
+		//ì‚¬ìš©ìê°€ ì‚¬ìš©í•˜ê¸° ë” í¸í•¨
 		for(int i=1; i<11;i++) {
 			if (i%2==1) {
 				System.out.println(i);

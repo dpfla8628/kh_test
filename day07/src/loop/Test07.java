@@ -1,4 +1,5 @@
-//1ºÎÅÍ 99»çÀÌ¿¡ ÀÖ´Â 3,6,9 °ÔÀÓ¿¡¼­ ¹Ú¼öÄ¡´Â ¼ıÀÚ¸¦ ±¸ÇÏ¿© Ãâ·Â
+
+//1ë¶€í„° 99ì‚¬ì´ì— ìˆëŠ” 3,6,9 ê²Œì„ì—ì„œ ë°•ìˆ˜ì¹˜ëŠ” ìˆ«ìë¥¼ êµ¬í•˜ì—¬ ì¶œë ¥
 
 package loop;
 
@@ -7,18 +8,18 @@ public class Test07 {
 	public static void main(String[] args) {
 		
 	for(int i=1; i<100; i++) {
-		//¹Ú¼ö µÎ¹ø Ä¡´Â °æ¿ì
-		//½ÊÀÇ ÀÚ¸®
+		//ë°•ìˆ˜ ë‘ë²ˆ ì¹˜ëŠ” ê²½ìš°!
+		//ì‹­ì˜ ìë¦¬
 		boolean first = i/10==3 || i/10==6 || i/10==9;
-		//ÀÏÀÇ ÀÚ¸®
+		//ì¼ì˜ ìë¦¬
 		boolean second = i%10==3 || i%10==6 || i%10==9;
 		
 		if(first||second) {
 			if(first) {
-				System.out.print("Â¦!");
+				System.out.print("ì§!");
 				}
 			if(second) {
-				System.out.print("Â¦!");
+				System.out.print("ì§!");
 				}
 			System.out.println();
 		}
@@ -26,20 +27,20 @@ public class Test07 {
 			System.out.println(i);
 		}
 		
-		/*¹æ¹ı1
+		/*ë°©ë²•1
 		boolean three = i/10==3 || i%10==3;
 		boolean six  = i/10==6 || i%10==6;
 		boolean nine = i/10==9 || i%10==9;
 		
 		if(three || six || nine){
-		  	System.out.println("¹Ú¼ö!");
+		  	System.out.println("ë°•ìˆ˜!");
 		  	}
 		else{
 			System.out.println(i);
 		}
 		*/  	
 		
-		/*¹æ¹ı2
+		/*ë°©ë²•2
 		 if((i/10)==3 || (i%10)==3
 		 ||(i/10)==6 || (i%10)==6
 		 ||(i/10)==9 || (i%10)==9) {

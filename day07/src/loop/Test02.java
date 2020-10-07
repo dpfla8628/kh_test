@@ -1,5 +1,4 @@
-
-//»ç¿ëÀÚ¿¡°Ô ÀÌ¹øÁÖ ·Î¶Ç¹øÈ£¸¦ ÀÔ·Â¹Ş´Â ÇÁ·Î±×·¥
+//ì‚¬ìš©ìì—ê²Œ ì´ë²ˆì£¼ ë¡œë˜ë²ˆí˜¸ë¥¼ ì…ë ¥ë°›ëŠ” í”„ë¡œê·¸ë¨
 
 package loop;
 
@@ -12,7 +11,7 @@ public class Test02 {
 		Scanner scan = new Scanner(System.in);
 		
 		for(int i=1;i<7;i++) {
-			System.out.printf(i+"¹ø Â° ·Î¶Ç ¹øÈ£ ÀÔ·Â : ");
+			System.out.printf(i+"ë²ˆ ì§¸ ë¡œë˜ ë²ˆí˜¸ ì…ë ¥ : ");
 			int lotto=scan.nextInt();
 		}
 

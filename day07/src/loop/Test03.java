@@ -1,5 +1,4 @@
-
-//Ä«¿îÆ®´Ù¿î ÇÁ·Î±×·¥
+//ì¹´ìš´íŠ¸ë‹¤ìš´ í”„ë¡œê·¸ë¨
 
 package loop;
 
@@ -13,11 +12,11 @@ public class Test03 {
 			System.out.println(i);
 		}*/
 		Scanner scan =new Scanner(System.in);
-		System.out.printf("½ÃÀÛ ¼ıÀÚ ÀÔ·Â : ");
+		System.out.printf("ì‹œì‘ ìˆ«ì ì…ë ¥ : ");
 		int a=scan.nextInt();
 		for(int i=a; i>=0; i--) {
 			System.out.println(i);
-			Thread.sleep(1000L);//1000¹Ğ¸®ÃÊ(1ÃÊ) ÈŞ½Ä!
+			Thread.sleep(1000L);//1000ë°€ë¦¬ì´ˆ(1ì´ˆ) íœ´ì‹!
 		}
 
 	}
