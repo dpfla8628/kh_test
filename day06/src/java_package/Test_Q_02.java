@@ -1,4 +1,4 @@
-//Á¶°Ç¹®_½Ç½À¹®Á¦
+//ì¡°ê±´ë¬¸_ì‹¤ìŠµë¬¸ì œ
 package java_package;
 
 import java.util.Scanner;
@@ -8,65 +8,65 @@ public class Test_Q_02 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-/*1) ¸Ş´º¸¦ Ãâ·ÂÇÏ°í ¸Ş´º ¹øÈ£¸¦ ´©¸£¸é ¡°OO¸Ş´ºÀÔ´Ï´Ù¡°¸¦,
-	   Á¾·á ¹øÈ£¸¦ ´©¸£¸é ¡°ÇÁ·Î±×·¥ÀÌ Á¾·áµË´Ï´Ù.¡±¸¦ Ãâ·ÂÇÏ¼¼¿ä.
+/*1) ë©”ë‰´ë¥¼ ì¶œë ¥í•˜ê³  ë©”ë‰´ ë²ˆí˜¸ë¥¼ ëˆ„ë¥´ë©´ â€œOOë©”ë‰´ì…ë‹ˆë‹¤â€œë¥¼,
+	   ì¢…ë£Œ ë²ˆí˜¸ë¥¼ ëˆ„ë¥´ë©´ â€œí”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë©ë‹ˆë‹¤.â€ë¥¼ ì¶œë ¥í•˜ì„¸ìš”.
 	   
-		System.out.printf("1. ÀÔ·Â\n2. ¼öÁ¤\n3. Á¶È¸\n4. »èÁ¦\n7. Á¾·á\n¸Ş´º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.printf("1. ì…ë ¥\n2. ìˆ˜ì •\n3. ì¡°íšŒ\n4. ì‚­ì œ\n7. ì¢…ë£Œ\në©”ë‰´ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int num = scan.nextInt();
 		
 		switch(num){
-		case 1 : System.out.println("ÀÔ·Â ¸Ş´ºÀÔ´Ï´Ù.");break;
-		case 2 : System.out.println("¼öÁ¤ ¸Ş´ºÀÔ´Ï´Ù.");break;
-		case 3 : System.out.println("Á¶È¸ ¸Ş´ºÀÔ´Ï´Ù.");break;
-		case 4 : System.out.println("»èÁ¦ ¸Ş´ºÀÔ´Ï´Ù.");break;
-		case 7 : System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµË´Ï´Ù.");break;}
+		case 1 : System.out.println("ì…ë ¥ ë©”ë‰´ì…ë‹ˆë‹¤.");break;
+		case 2 : System.out.println("ìˆ˜ì • ë©”ë‰´ì…ë‹ˆë‹¤.");break;
+		case 3 : System.out.println("ì¡°íšŒ ë©”ë‰´ì…ë‹ˆë‹¤.");break;
+		case 4 : System.out.println("ì‚­ì œ ë©”ë‰´ì…ë‹ˆë‹¤.");break;
+		case 7 : System.out.println("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë©ë‹ˆë‹¤.");break;}
 */
 /*2)		
-		System.out.printf("¼ıÀÚ¸¦ ÇÑ °³ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.printf("ìˆ«ìë¥¼ í•œ ê°œ ì…ë ¥í•˜ì„¸ìš” : ");
 		int a = scan.nextInt();
 		if(a>0 && a%2==0) {
-			System.out.println("Â¦¼ö´Ù");
+			System.out.println("ì§ìˆ˜ë‹¤");
 		}
 		else if(a>0 && a%2!=0) {
-			System.out.println("È¦¼ö´Ù");
+			System.out.println("í™€ìˆ˜ë‹¤");
 		}
 		else {
-			System.out.println("¾ç¼ö¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("ì–‘ìˆ˜ë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		}
 */
 /* 3)		
-		System.out.printf("±¹¾î Á¡¼ö : ");
+		System.out.printf("êµ­ì–´ ì ìˆ˜ : ");
 		int kor = scan.nextInt();
-		System.out.printf("¼öÇĞ Á¡¼ö : ");
+		System.out.printf("ìˆ˜í•™ ì ìˆ˜ : ");
 		int math = scan.nextInt();
-		System.out.printf("¿µ¾î Á¡¼ö : ");
+		System.out.printf("ì˜ì–´ ì ìˆ˜ : ");
 		int eng = scan.nextInt();
 		int sum = kor+math+eng;
 		double avg=(kor+math+eng)/3;
 		if(kor>=40 && math>=40 && eng>=40 &&avg>=60) {
-			System.out.println("±¹¾î : "+ kor + "\n¼öÇĞ : "+math+"\n¿µ¾î : "+eng+"\nÇÕ°è : "+sum+"\nÆò±Õ : "+avg+"\nÃàÇÏÇÕ´Ï´Ù, ÇÕ°İÀÔ´Ï´Ù");
+			System.out.println("êµ­ì–´ : "+ kor + "\nìˆ˜í•™ : "+math+"\nì˜ì–´ : "+eng+"\ní•©ê³„ : "+sum+"\ní‰ê·  : "+avg+"\nì¶•í•˜í•©ë‹ˆë‹¤, í•©ê²©ì…ë‹ˆë‹¤");
 		}
 		else {
-			System.out.println("ºÒÇÕ°İÀÔ´Ï´Ù.");
+			System.out.println("ë¶ˆí•©ê²©ì…ë‹ˆë‹¤.");
 		}
 */
 /* 3)
 		String id = "abc";
 		String pass="123";
 		
-		System.out.printf("¾ÆÀÌµğ : ");
+		System.out.printf("ì•„ì´ë”” : ");
 		String a = scan.next();
-		System.out.printf("ºñ¹Ğ¹øÈ£ : ");
+		System.out.printf("ë¹„ë°€ë²ˆí˜¸ : ");
 		String b = scan.next();
 		
 		if(id.equals(a)&&pass.equals(b)) {
-			System.out.println("·Î±×ÀÎ ¼º°ø");
+			System.out.println("ë¡œê·¸ì¸ ì„±ê³µ");
 		}
 		else if(id.equals(a)) {
-			System.out.println("ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù");
+			System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤");
 		}
 		else if(pass.equals(b)) {
-			System.out.println("¾ÆÀÌµğ°¡ Æ²·È½À´Ï´Ù");
+			System.out.println("ì•„ì´ë””ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤");
 		}
 */
 		

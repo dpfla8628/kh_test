@@ -1,4 +1,4 @@
-//Á¶°Ç¹® 6ÀÏÂ÷ °úÁ¦
+//ì¡°ê±´ë¬¸ 6ì¼ì°¨ ê³¼ì œ
 package java_package;
 
 import java.util.Scanner;
@@ -9,31 +9,31 @@ public class JavaClass_05 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.printf("ÀÎ¿ø ¼ö : ");
+		System.out.printf("ì¸ì› ìˆ˜ : ");
 		int num = scan.nextInt();
-		System.out.printf("¿©Çà ±â°£(´Ş) : ");
+		System.out.printf("ì—¬í–‰ ê¸°ê°„(ë‹¬) : ");
 		int day = scan.nextInt();
 		
-		int pay1=100000*num;//ÇÒÀÎ ¹Ş±â Àü ±İ¾×(ÀÎ¿ø¼ö*ÀÎ´ç ¿ä±İ)
-		double pay2=0;//ÇÒÀÎ ±İ¾×
+		int pay1=100000*num;//í• ì¸ ë°›ê¸° ì „ ê¸ˆì•¡(ì¸ì›ìˆ˜*ì¸ë‹¹ ìš”ê¸ˆ)
+		double pay2=0;//í• ì¸ ê¸ˆì•¡
 		
 		switch(day){
-		case 12: case 1: case 2://°Ü¿ï 5%
+		case 12: case 1: case 2://ê²¨ìš¸ 5%
 			pay2 = 0.05;
 			break;
-		case 3: case 4: case 5://º½ 30%
+		case 3: case 4: case 5://ë´„ 30%
 			pay2 = 0.3;
 			break;
-		case 6: case 7: case 8://¿©¸§ 0%
+		case 6: case 7: case 8://ì—¬ë¦„ 0%
 			break;
-		case 9: case 10: case 11://°¡À» 15%
+		case 9: case 10: case 11://ê°€ì„ 15%
 			pay2 = 0.15;
 			break;
 		}
 		
-		double pay3=(pay1-(pay1*pay2));//ÇÒÀÎ ¹ŞÀº ÈÄ ±İ¾×
+		double pay3=(pay1-(pay1*pay2));//í• ì¸ ë°›ì€ í›„ ê¸ˆì•¡
 		
-		System.out.println("1.ÇÒÀÎ ¹Ş±â Àü ±İ¾× : "+pay1+ "\n2.ÇÒÀÎ ±İ¾× : "+(int)(pay2*100)+"%\n3.ÇÒÀÎ¹ŞÀº ÈÄ ±İ¾× : "+(int)pay3);
+		System.out.println("1.í• ì¸ ë°›ê¸° ì „ ê¸ˆì•¡ : "+pay1+ "\n2.í• ì¸ ê¸ˆì•¡ : "+(int)(pay2*100)+"%\n3.í• ì¸ë°›ì€ í›„ ê¸ˆì•¡ : "+(int)pay3);
 	}
 
 }

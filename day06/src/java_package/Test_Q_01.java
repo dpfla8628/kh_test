@@ -1,4 +1,4 @@
-//¿¬»êÀÚ_½Ç½À¹®Á¦
+//ì—°ì‚°ì_ì‹¤ìŠµë¬¸ì œ
 package java_package;
 
 import java.util.Scanner;
@@ -7,146 +7,146 @@ public class Test_Q_01 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-/*1¹ø)  Å°º¸µå·Î ÀÔ·Â ¹ŞÀº ÇÏ³ªÀÇ Á¤¼ö°¡ ¾ç¼öÀÌ¸é ¡°¾ç¼ö´Ù¡°, 
-                ¾ç¼ö°¡ ¾Æ´Ï¸é ¡°¾ç¼ö°¡ ¾Æ´Ï´Ù¡°¸¦ Ãâ·Â
+/*1ë²ˆ)  í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì€ í•˜ë‚˜ì˜ ì •ìˆ˜ê°€ ì–‘ìˆ˜ì´ë©´ â€œì–‘ìˆ˜ë‹¤â€œ, 
+                ì–‘ìˆ˜ê°€ ì•„ë‹ˆë©´ â€œì–‘ìˆ˜ê°€ ì•„ë‹ˆë‹¤â€œë¥¼ ì¶œë ¥
  
-		System.out.printf("Á¤¼ö : ");
+		System.out.printf("ì •ìˆ˜ : ");
 		int a = scan.nextInt();
-		System.out.println(a>0?"¾ç¼ö´Ù":"¾ç¼ö°¡ ¾Æ´Ï´Ù");
-		/* if¹®
+		System.out.println(a>0?"ì–‘ìˆ˜ë‹¤":"ì–‘ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
+		/* ifë¬¸
 		   if(a>0){
-		   		System.out.println("¾ç¼ö´Ù");
+		   		System.out.println("ì–‘ìˆ˜ë‹¤");
 		   		}
 		   	else{
-		   		System.out.println("¾ç¼ö°¡ ¾Æ´Ï´Ù");
+		   		System.out.println("ì–‘ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
 		   		}
-		   	System.out.println("ÇÁ·Î±×·¥ ³¡");
+		   	System.out.println("í”„ë¡œê·¸ë¨ ë");
 */
 		
-/*2¹ø) Å°º¸µå·Î ÀÔ·Â ¹ŞÀº ÇÏ³ªÀÇ Á¤¼ö°¡ ¾ç¼öÀÌ¸é ¡°¾ç¼ö´Ù¡°,
-              ¾ç¼ö°¡ ¾Æ´Ñ °æ¿ì Áß¿¡¼­ 0ÀÌ¸é ¡°0ÀÌ´Ù¡°, 0ÀÌ ¾Æ´Ï¸é ¡°À½¼ö´Ù¡±¸¦ Ãâ·Â
+/*2ë²ˆ) í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì€ í•˜ë‚˜ì˜ ì •ìˆ˜ê°€ ì–‘ìˆ˜ì´ë©´ â€œì–‘ìˆ˜ë‹¤â€œ,
+              ì–‘ìˆ˜ê°€ ì•„ë‹Œ ê²½ìš° ì¤‘ì—ì„œ 0ì´ë©´ â€œ0ì´ë‹¤â€œ, 0ì´ ì•„ë‹ˆë©´ â€œìŒìˆ˜ë‹¤â€ë¥¼ ì¶œë ¥
               
-		System.out.printf("Á¤¼ö : ");
+		System.out.printf("ì •ìˆ˜ : ");
 		int a = scan.nextInt();
-		System.out.println((a>0)?"¾ç¼ö´Ù":(a==0)?"0ÀÌ´Ù":"À½¼ö´Ù");
+		System.out.println((a>0)?"ì–‘ìˆ˜ë‹¤":(a==0)?"0ì´ë‹¤":"ìŒìˆ˜ë‹¤");
 */
 		
-/*3¹ø) Å°º¸µå·Î ÀÔ·Â ¹ŞÀº ÇÏ³ªÀÇ Á¤¼ö°¡ Â¦¼öÀÌ¸é ¡°Â¦¼ö´Ù¡°, 
-              Â¦¼ö°¡ ¾Æ´Ï¸é ¡°È¦¼ö´Ù¡°¸¦ Ãâ·Â 
+/*3ë²ˆ) í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì€ í•˜ë‚˜ì˜ ì •ìˆ˜ê°€ ì§ìˆ˜ì´ë©´ â€œì§ìˆ˜ë‹¤â€œ, 
+              ì§ìˆ˜ê°€ ì•„ë‹ˆë©´ â€œí™€ìˆ˜ë‹¤â€œë¥¼ ì¶œë ¥ 
               
-		System.out.print("Á¤¼ö : ");
+		System.out.print("ì •ìˆ˜ : ");
 		int a = scan.nextInt();
 		
 		if (a%2==0) {
-			System.out.println("Â¦¼ö´Ù");
+			System.out.println("ì§ìˆ˜ë‹¤");
 			}
 		else {
-			System.out.println("È¦¼ö´Ù");
+			System.out.println("í™€ìˆ˜ë‹¤");
 		}
 */
 		
-/*4¹ø) ÀÎ¿ø ¼ö¿Í »çÅÁ °³¼ö¸¦ Å°º¸µå·Î ÀÔ·Â ¹Ş°í
-	  1ÀÎ´ç µ¿ÀÏÇÏ°Ô ³ª´²°¡Áø »çÅÁ °³¼ö¿Í ³ª´²ÁÖ°í ³²Àº »çÅÁÀÇ °³¼ö¸¦ Ãâ·Â
+/*4ë²ˆ) ì¸ì› ìˆ˜ì™€ ì‚¬íƒ• ê°œìˆ˜ë¥¼ í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ê³ 
+	  1ì¸ë‹¹ ë™ì¼í•˜ê²Œ ë‚˜ëˆ ê°€ì§„ ì‚¬íƒ• ê°œìˆ˜ì™€ ë‚˜ëˆ ì£¼ê³  ë‚¨ì€ ì‚¬íƒ•ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥
 	  
-		System.out.printf("ÀÎ¿ø ¼ö : ");
+		System.out.printf("ì¸ì› ìˆ˜ : ");
 		int a = scan.nextInt();
 		if(a>0) {
-			System.out.printf("»çÅÁ °³¼ö : ");
+			System.out.printf("ì‚¬íƒ• ê°œìˆ˜ : ");
 			int b=scan.nextInt();
 			
-			System.out.println("1ÀÎ´ç »çÅÁ °³¼ö : "+(b/a));
-			System.out.println("³²Àº »çÅÁ °³¼ö : "+(b%a));}
+			System.out.println("1ì¸ë‹¹ ì‚¬íƒ• ê°œìˆ˜ : "+(b/a));
+			System.out.println("ë‚¨ì€ ì‚¬íƒ• ê°œìˆ˜ : "+(b%a));}
 		else {
-			System.out.println("0À¸·Î ³ª´­ ¼ö ¾øÀ½");
+			System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŒ");
 		}
 */
 
-/*5¹ø)  Å°º¸µå·Î ÀÔ·Â ¹ŞÀº °ªµéÀ» º¯¼ö¿¡ ±â·ÏÇÏ°í ÀúÀåµÈ º¯¼ö °ªÀ» È­¸é¿¡ Ãâ·Â
-  		ÀÌ ¶§ ¼ºº°ÀÌ ¡®M¡¯ÀÌ¸é ³²ÇĞ»ı, ¡®M¡¯ÀÌ ¾Æ´Ï¸é ¿©ÇĞ»ıÀ¸·Î Ãâ·Â
+/*5ë²ˆ)  í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì€ ê°’ë“¤ì„ ë³€ìˆ˜ì— ê¸°ë¡í•˜ê³  ì €ì¥ëœ ë³€ìˆ˜ ê°’ì„ í™”ë©´ì— ì¶œë ¥
+  		ì´ ë•Œ ì„±ë³„ì´ â€˜Mâ€™ì´ë©´ ë‚¨í•™ìƒ, â€˜Mâ€™ì´ ì•„ë‹ˆë©´ ì—¬í•™ìƒìœ¼ë¡œ ì¶œë ¥
   		
-		System.out.printf("ÀÌ¸§ : ");
+		System.out.printf("ì´ë¦„ : ");
 		String name = scan.next();
-		System.out.printf("ÇĞ³â(¼ıÀÚ¸¸) : ");
+		System.out.printf("í•™ë…„(ìˆ«ìë§Œ) : ");
 		int grade = scan.nextInt();
-		System.out.printf("¹İ(¼ıÀÚ¸¸) : ");
+		System.out.printf("ë°˜(ìˆ«ìë§Œ) : ");
 		int clas = scan.nextInt();
-		System.out.printf("¹øÈ£(¼ıÀÚ¸¸) : ");
+		System.out.printf("ë²ˆí˜¸(ìˆ«ìë§Œ) : ");
 		int num = scan.nextInt();
-		System.out.printf("¼ºº°(M/F) : ");
+		System.out.printf("ì„±ë³„(M/F) : ");
 		String sex = scan.next();
 			if(sex.equals("m")||sex.equals("M")){
-				sex="³²";}
+				sex="ë‚¨";}
 			else if(sex.equals("f")||sex.equals("F")){
-				sex="¿©";}
-			//OR char sex=='M'ÀÏ ¶§ sout->³²ÇĞ»ı,¾Æ´Ï¶ó¸é sout->¿©ÇĞ»ı
-		System.out.printf("¼ºÀû(¼Ò¼öÁ¡ ¾Æ·¡ µÑÂ°ÀÚ¸®±îÁö) : ");
+				sex="ì—¬";}
+			//OR char sex=='M'ì¼ ë•Œ sout->ë‚¨í•™ìƒ,ì•„ë‹ˆë¼ë©´ sout->ì—¬í•™ìƒ
+		System.out.printf("ì„±ì (ì†Œìˆ˜ì  ì•„ë˜ ë‘˜ì§¸ìë¦¬ê¹Œì§€) : ");
 		Double score = scan.nextDouble();
 		
-		System.out.println(grade+"ÇĞ³â "+clas+"¹İ "+num+"¹ø "+name+" "+sex+"ÇĞ»ıÀÇ ¼ºÀûÀº "+score+"ÀÌ´Ù.");
+		System.out.println(grade+"í•™ë…„ "+clas+"ë°˜ "+num+"ë²ˆ "+name+" "+sex+"í•™ìƒì˜ ì„±ì ì€ "+score+"ì´ë‹¤.");
 */	
 		
-/*6¹ø) ³ªÀÌ¸¦ Å°º¸µå·Î ÀÔ·Â ¹Ş¾Æ ¾î¸°ÀÌ(13¼¼ ÀÌÇÏ)ÀÎÁö, Ã»¼Ò³â(13¼¼ ÃÊ°ú ~ 19¼¼ ÀÌÇÏ)ÀÎÁö,
-		¼ºÀÎ(19¼¼ ÃÊ°ú)ÀÎÁö Ãâ·Â
+/*6ë²ˆ) ë‚˜ì´ë¥¼ í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì•„ ì–´ë¦°ì´(13ì„¸ ì´í•˜)ì¸ì§€, ì²­ì†Œë…„(13ì„¸ ì´ˆê³¼ ~ 19ì„¸ ì´í•˜)ì¸ì§€,
+		ì„±ì¸(19ì„¸ ì´ˆê³¼)ì¸ì§€ ì¶œë ¥
 		
-		System.out.printf("³ªÀÌ : ");
+		System.out.printf("ë‚˜ì´ : ");
 		int age = scan.nextInt();
 		
 		if(age<=13) {
-			System.out.println("¾î¸°ÀÌ");}
+			System.out.println("ì–´ë¦°ì´");}
 		else if(age>13 && age<=19) {
-			System.out.println("Ã»¼Ò³â");}
+			System.out.println("ì²­ì†Œë…„");}
 		else {
-			System.out.println("¼ºÀÎ");
+			System.out.println("ì„±ì¸");
 		}
 */
 		
-/*7¹ø) ±¹¾î, ¿µ¾î, ¼öÇĞ¿¡ ´ëÇÑ Á¡¼ö¸¦ Å°º¸µå¸¦ ÀÌ¿ëÇØ Á¤¼ö·Î ÀÔ·Â ¹Ş°í,
-	     ¼¼ °ú¸ñ¿¡ ´ëÇÑ ÇÕ°è(±¹¾î+¿µ¾î+¼öÇĞ)¿Í Æò±Õ(ÇÕ°è/3.0)À» ±¸ÇÏ¼¼¿ä.
-	     ¼¼ °ú¸ñ Á¡¼ö°¡ °¢°¢ 40Á¡ ÀÌ»óÀÌ¸é¼­ Æò±ÕÀÌ 60Á¡ ÀÌ»óÀÏ ¶§ ÇÕ°İ, ¾Æ´Ï¶ó¸é ºÒÇÕ°İÀ» Ãâ·Â
+/*7ë²ˆ) êµ­ì–´, ì˜ì–´, ìˆ˜í•™ì— ëŒ€í•œ ì ìˆ˜ë¥¼ í‚¤ë³´ë“œë¥¼ ì´ìš©í•´ ì •ìˆ˜ë¡œ ì…ë ¥ ë°›ê³ ,
+	     ì„¸ ê³¼ëª©ì— ëŒ€í•œ í•©ê³„(êµ­ì–´+ì˜ì–´+ìˆ˜í•™)ì™€ í‰ê· (í•©ê³„/3.0)ì„ êµ¬í•˜ì„¸ìš”.
+	     ì„¸ ê³¼ëª© ì ìˆ˜ê°€ ê°ê° 40ì  ì´ìƒì´ë©´ì„œ í‰ê· ì´ 60ì  ì´ìƒì¼ ë•Œ í•©ê²©, ì•„ë‹ˆë¼ë©´ ë¶ˆí•©ê²©ì„ ì¶œë ¥
 	     
-		System.out.printf("±¹¾î : ");
+		System.out.printf("êµ­ì–´ : ");
 		int kor = scan.nextInt();
-		System.out.printf("¿µ¾î : ");
+		System.out.printf("ì˜ì–´ : ");
 		int eng = scan.nextInt();
-		System.out.printf("¼öÇĞ : ");
+		System.out.printf("ìˆ˜í•™ : ");
 		int math = scan.nextInt();
 		
 		double avg=((kor+eng+math)/3);
 		int sum=(kor+eng+math);
 				
-		System.out.println("ÇÕ°è : "+sum);
-		System.out.println("Æò±Õ : "+avg);
+		System.out.println("í•©ê³„ : "+sum);
+		System.out.println("í‰ê·  : "+avg);
 		
 		if(kor>=40&&eng>=40&&math>=40&&avg>=60) {
-			System.out.println("ÇÕ°İ");}
+			System.out.println("í•©ê²©");}
 		else {
-			System.out.println("ºÒÇÕ°İ");}
+			System.out.println("ë¶ˆí•©ê²©");}
 */
 	
-/*8¹ø) ÁÖ¹Î¹øÈ£¸¦ ÀÌ¿ëÇÏ¿© ³²ÀÚÀÎÁö ¿©ÀÚÀÎÁö ±¸ºĞÇÏ¿© Ãâ·Â
+/*8ë²ˆ) ì£¼ë¯¼ë²ˆí˜¸ë¥¼ ì´ìš©í•˜ì—¬ ë‚¨ìì¸ì§€ ì—¬ìì¸ì§€ êµ¬ë¶„í•˜ì—¬ ì¶œë ¥
  * 
-		System.out.printf("ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä(- Æ÷ÇÔ) : ");
+		System.out.printf("ì£¼ë¯¼ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”(- í¬í•¨) : ");
 		String num = scan.next();
 		if(num.charAt(8)==2) {
-			System.out.println("¿©ÀÚ");}
+			System.out.println("ì—¬ì");}
 		else {
-			System.out.println("³²ÀÚ");}
+			System.out.println("ë‚¨ì");}
 */
 	
-/*9¹ø) Å°º¸µå·Î Á¤¼ö µÎ °³¸¦ ÀÔ·Â ¹Ş¾Æ °¢°¢ º¯¼ö(num1, num2)¿¡ ÀúÀåÇÏ¼¼¿ä.
-		±×¸®°í ¶Ç ´Ù¸¥ Á¤¼ö¸¦ ÀÔ·Â ¹Ş¾Æ ±× ¼ö°¡ num1 ÀÌÇÏ°Å³ª num2 ÃÊ°úÀÌ¸é true¸¦ Ãâ·ÂÇÏ°í
-		¾Æ´Ï¸é false¸¦ Ãâ·ÂÇÏ¼¼¿ä.
-		(´Ü, num1Àº num2º¸´Ù ÀÛ¾Æ¾ß ÇÔ)
+/*9ë²ˆ) í‚¤ë³´ë“œë¡œ ì •ìˆ˜ ë‘ ê°œë¥¼ ì…ë ¥ ë°›ì•„ ê°ê° ë³€ìˆ˜(num1, num2)ì— ì €ì¥í•˜ì„¸ìš”.
+		ê·¸ë¦¬ê³  ë˜ ë‹¤ë¥¸ ì •ìˆ˜ë¥¼ ì…ë ¥ ë°›ì•„ ê·¸ ìˆ˜ê°€ num1 ì´í•˜ê±°ë‚˜ num2 ì´ˆê³¼ì´ë©´ trueë¥¼ ì¶œë ¥í•˜ê³ 
+		ì•„ë‹ˆë©´ falseë¥¼ ì¶œë ¥í•˜ì„¸ìš”.
+		(ë‹¨, num1ì€ num2ë³´ë‹¤ ì‘ì•„ì•¼ í•¨)
 		
-		System.out.printf("Á¤¼ö1 : ");
+		System.out.printf("ì •ìˆ˜1 : ");
 		int num1 = scan.nextInt();
-		System.out.printf("Á¤¼ö2 : ");
+		System.out.printf("ì •ìˆ˜2 : ");
 		int num2 = scan.nextInt();
 		if(num1>num2) {
-			System.out.println("Á¤¼ö1Àº Á¤¼ö2º¸´Ù ÀÛ¾Æ¾ß ÇÔ");
+			System.out.println("ì •ìˆ˜1ì€ ì •ìˆ˜2ë³´ë‹¤ ì‘ì•„ì•¼ í•¨");
 		}
 		else {
-		System.out.printf("ÀÔ·Â : ");
+		System.out.printf("ì…ë ¥ : ");
 		int check = scan.nextInt();
 		
 		if(check<=num1||check>num2) {
@@ -156,14 +156,14 @@ public class Test_Q_01 {
 		}
 */	
 		
-/*10¹ø) 3°³ÀÇ ¼ö¸¦ Å°º¸µå·Î ÀÔ·Â ¹Ş¾Æ ÀÔ·Â ¹ŞÀº ¼ö°¡ ¸ğµÎ °°À¸¸é true, 
-  	        ¾Æ´Ï¸é false¸¦ Ãâ·Â
+/*10ë²ˆ) 3ê°œì˜ ìˆ˜ë¥¼ í‚¤ë³´ë“œë¡œ ì…ë ¥ ë°›ì•„ ì…ë ¥ ë°›ì€ ìˆ˜ê°€ ëª¨ë‘ ê°™ìœ¼ë©´ true, 
+  	        ì•„ë‹ˆë©´ falseë¥¼ ì¶œë ¥
 		
-		System.out.print("ÀÔ·Â1 : ");
+		System.out.print("ì…ë ¥1 : ");
 		int num1 = scan.nextInt();
-		System.out.print("ÀÔ·Â2 : ");
+		System.out.print("ì…ë ¥2 : ");
 		int num2 = scan.nextInt();
-		System.out.print("ÀÔ·Â3 : ");
+		System.out.print("ì…ë ¥3 : ");
 		int num3 = scan.nextInt();
 		
 		if(num1==num2&&num2==num3) {
@@ -172,36 +172,36 @@ public class Test_Q_01 {
 			System.out.println("false");}
 */		
 		
-/*11¹ø)	A, B, C »ç¿øÀÇ ¿¬ºÀÀ» ÀÔ·Â ¹Ş°í °¢ »ç¿øÀÇ ¿¬ºÀ°ú ÀÎ¼¾Æ¼ºê¸¦ Æ÷ÇÔÇÑ ¿¬ºÀÀ» °è»êÇÏ¿© Ãâ·ÂÇÏ°í
-		ÀÎ¼¾Æ¼ºê Æ÷ÇÔ ±Ş¿©°¡ 3000¸¸¿ø ÀÌ»óÀÌ¸é ¡°3000 ÀÌ»ó¡±, ¹Ì¸¸ÀÌ¸é ¡°3000 ¹Ì¸¸¡±À» Ãâ·ÂÇÏ¼¼¿ä.
-		(A »ç¿øÀÇ ÀÎ¼¾Æ¼ºê´Â 0.4, B »ç¿øÀÇ ÀÎ¼¾Æ¼ºê´Â ¾øÀ¸¸ç, C »ç¿øÀÇ ÀÎ¼¾Æ¼ºê´Â 0.15)	
+/*11ë²ˆ)	A, B, C ì‚¬ì›ì˜ ì—°ë´‰ì„ ì…ë ¥ ë°›ê³  ê° ì‚¬ì›ì˜ ì—°ë´‰ê³¼ ì¸ì„¼í‹°ë¸Œë¥¼ í¬í•¨í•œ ì—°ë´‰ì„ ê³„ì‚°í•˜ì—¬ ì¶œë ¥í•˜ê³ 
+		ì¸ì„¼í‹°ë¸Œ í¬í•¨ ê¸‰ì—¬ê°€ 3000ë§Œì› ì´ìƒì´ë©´ â€œ3000 ì´ìƒâ€, ë¯¸ë§Œì´ë©´ â€œ3000 ë¯¸ë§Œâ€ì„ ì¶œë ¥í•˜ì„¸ìš”.
+		(A ì‚¬ì›ì˜ ì¸ì„¼í‹°ë¸ŒëŠ” 0.4, B ì‚¬ì›ì˜ ì¸ì„¼í‹°ë¸ŒëŠ” ì—†ìœ¼ë©°, C ì‚¬ì›ì˜ ì¸ì„¼í‹°ë¸ŒëŠ” 0.15)	
 		
-		System.out.print("A»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Aì‚¬ì›ì˜ ì—°ë´‰ : ");
 		int a_sal = scan.nextInt();
-		System.out.print("B»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Bì‚¬ì›ì˜ ì—°ë´‰ : ");
 		int b_sal = scan.nextInt();
-		System.out.print("C»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Cì‚¬ì›ì˜ ì—°ë´‰ : ");
 		int c_sal = scan.nextInt();
 		
 		double a_plus = a_sal+(a_sal*0.4);
 		double b_plus = b_sal;
 		double c_plus = c_sal+(c_sal*0.15);
 		
-		System.out.println("A»ç¿ø ¿¬ºÀ/¿¬ºÀ+a : "+a_sal+"/"+a_plus);
+		System.out.println("Aì‚¬ì› ì—°ë´‰/ì—°ë´‰+a : "+a_sal+"/"+a_plus);
 		if(a_plus>=3000) {
-			System.out.println("3000 ÀÌ»ó");}
+			System.out.println("3000 ì´ìƒ");}
 		else {
-			System.out.println("3000 ¹Ì¸¸");}
-		System.out.println("B»ç¿ø ¿¬ºÀ/¿¬ºÀ+a : "+b_sal+"/"+b_plus);
+			System.out.println("3000 ë¯¸ë§Œ");}
+		System.out.println("Bì‚¬ì› ì—°ë´‰/ì—°ë´‰+a : "+b_sal+"/"+b_plus);
 		if(b_plus>=3000) {
-			System.out.println("3000 ÀÌ»ó");}
+			System.out.println("3000 ì´ìƒ");}
 		else {
-			System.out.println("3000 ¹Ì¸¸");}
-		System.out.println("C»ç¿ø ¿¬ºÀ/¿¬ºÀ+a : "+c_sal+"/"+c_plus);
+			System.out.println("3000 ë¯¸ë§Œ");}
+		System.out.println("Cì‚¬ì› ì—°ë´‰/ì—°ë´‰+a : "+c_sal+"/"+c_plus);
 		if(c_plus>=3000) {
-			System.out.println("3000 ÀÌ»ó");}
+			System.out.println("3000 ì´ìƒ");}
 		else {
-			System.out.println("3000 ¹Ì¸¸");}
+			System.out.println("3000 ë¯¸ë§Œ");}
 */
 		
 	}

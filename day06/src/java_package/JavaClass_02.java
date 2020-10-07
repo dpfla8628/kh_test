@@ -1,5 +1,5 @@
 //Scanner
-//Á¤¼ö : nextint() ½Ç¼ö : nextdouble() ¹®ÀÚ¿­(string) : next()
+//ì •ìˆ˜ : nextint() ì‹¤ìˆ˜ : nextdouble() ë¬¸ìì—´(string) : next()
 package java_package;
 
 import java.util.Scanner;
@@ -9,15 +9,15 @@ public class JavaClass_02 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("ÀÌ¸§ ÀÔ·Â:");
+		System.out.print("ì´ë¦„ ì…ë ¥:");
 		String name = scan.next();
-		System.out.print("³ªÀÌ ÀÔ·Â:");
+		System.out.print("ë‚˜ì´ ì…ë ¥:");
 		int age = scan.nextInt();
-		System.out.println("ÀÌ¸§:"+name+"\n³ªÀÌ:"+age);
+		System.out.println("ì´ë¦„:"+name+"\në‚˜ì´:"+age);
 		
-		/* ±¸±¸´Ü
+		/* êµ¬êµ¬ë‹¨
 		int a= scan.nextInt();
-		System.out.println(a + "´Ü ½ÃÀÛ ");
+		System.out.println(a + "ë‹¨ ì‹œì‘ ");
 		for(int i=1;i<11;i++) {
 		System.out.println(a+"*"+i+"="+a*i);
 		*/}

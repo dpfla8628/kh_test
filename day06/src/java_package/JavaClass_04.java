@@ -1,4 +1,4 @@
-//switch¹® test
+//switchë¬¸ test
 package java_package;
 
 public class JavaClass_04 {
@@ -6,42 +6,42 @@ public class JavaClass_04 {
 	public static void main(String[] args) {
 		
 		int month = 1;
-		/*´Ş¿¡ µû¸¥ ÀÏ¼ö
+		/*ë‹¬ì— ë”°ë¥¸ ì¼ìˆ˜
 		switch(month) {
 		case 1 : case 3 :case 5 :case 7 :case 8 :case 10 : case 12 :
-			System.out.println("31ÀÏ"); break;
-		case 2 : System.out.println("29ÀÏ"); break;
+			System.out.println("31ì¼"); break;
+		case 2 : System.out.println("29ì¼"); break;
 		case 4 : case 6: case 9 : case 11:
-			System.out.println("30ÀÏ"); break;
+			System.out.println("30ì¼"); break;
 		}*/
-		/*´Ş¿¡ µû¸¥ °èÀı 1
+		/*ë‹¬ì— ë”°ë¥¸ ê³„ì ˆ 1
 		switch(month) {
 		case 3: case 4: case 5:
-			System.out.println("º½");
+			System.out.println("ë´„");
 			break;
 		case 6: case 7: case 8:
-			System.out.println("¿©¸§");
+			System.out.println("ì—¬ë¦„");
 			break;
 		case 9: case 10: case 11:
-			System.out.println("°¡À»");
+			System.out.println("ê°€ì„");
 			break;
 		case 12: case 1: case 12:
-			System.out.println("°Ü¿ï");
+			System.out.println("ê²¨ìš¸");
 			break;
 		}*/
-		/*´Ş¿¡ µû¸¥ °èÀı 2
+		/*ë‹¬ì— ë”°ë¥¸ ê³„ì ˆ 2
 		switch(month/3) {
 		case 1:
-			System.out.println("º½");
+			System.out.println("ë´„");
 			break;
 		case 2:
-			System.out.println("¿©¸§");
+			System.out.println("ì—¬ë¦„");
 			break;
 		case 3:
-			System.out.println("°¡À»");
+			System.out.println("ê°€ì„");
 			break;
 		case 0: case 4: //default:
-			System.out.println("°Ü¿ï");
+			System.out.println("ê²¨ìš¸");
 			break;
 		}*/
 

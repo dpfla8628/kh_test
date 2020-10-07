@@ -1,29 +1,29 @@
-//switch¹®
+//switchë¬¸
 package java_package;
 
 public class JavaClass_03 {
 
 	public static void main(String[] args) {
-		//°¡À§¹ÙÀ§º¸ : 1(°¡À§),2(¹ÙÀ§),3(º¸)
+		//ê°€ìœ„ë°”ìœ„ë³´ : 1(ê°€ìœ„),2(ë°”ìœ„),3(ë³´)
 		
 		int user = 1;
-		//if¹®Àº Á¶°Ç Áú¹®À» µÎ¹ø(1,2)ÇÏÁö¸¸, switch¹®Àº ¹Ù·Î Á¶°Ç(3)À¸·Î ÀÌµ¿
+		//ifë¬¸ì€ ì¡°ê±´ ì§ˆë¬¸ì„ ë‘ë²ˆ(1,2)í•˜ì§€ë§Œ, switchë¬¸ì€ ë°”ë¡œ ì¡°ê±´(3)ìœ¼ë¡œ ì´ë™
 		switch(user) {
-		case 1 ://¿©±â¼­ 1Àº ¸®ÅÍ·² »ó¼öÀÌ´Ù. 
-			System.out.println("°¡À§");break;
-		case 2 : System.out.println("¹ÙÀ§");break;
-		case 3 : System.out.println("º¸"); break;
+		case 1 ://ì—¬ê¸°ì„œ 1ì€ ë¦¬í„°ëŸ´ ìƒìˆ˜ì´ë‹¤. 
+			System.out.println("ê°€ìœ„");break;
+		case 2 : System.out.println("ë°”ìœ„");break;
+		case 3 : System.out.println("ë³´"); break;
 		default : //else
-			System.out.println("Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 		}
 		/*if(user==1) {
-			System.out.println("°¡À§");
+			System.out.println("ê°€ìœ„");
 		}
 		else if(user==2) {
-			System.out.println("¹ÙÀ§");
+			System.out.println("ë°”ìœ„");
 		}
 		else {
-			System.out.println("º¸");
+			System.out.println("ë³´");
 		}*/
 		
 

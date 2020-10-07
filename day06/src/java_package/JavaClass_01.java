@@ -1,4 +1,4 @@
-//escape ¹®ÀÚ
+//escape ë¬¸ì
 
 package java_package;
 
@@ -6,10 +6,10 @@ public class JavaClass_01 {
 
 	public static void main(String[] args) {
 		
-		System.out.printf("ÀÌ¸§\t: %s\n","È«±æµ¿");
-		System.out.printf("³ªÀÌ\t: %d\n",20);
-		System.out.printf("ÀüÈ­¹øÈ£\t: %s\n","010-1234-1234");
-		System.out.println("\"Å«µû¿ÈÇ¥\"");
+		System.out.printf("ì´ë¦„\t: %s\n","í™ê¸¸ë™");
+		System.out.printf("ë‚˜ì´\t: %d\n",20);
+		System.out.printf("ì „í™”ë²ˆí˜¸\t: %s\n","010-1234-1234");
+		System.out.println("\"í°ë”°ì˜´í‘œ\"");
 	}
 
 }
