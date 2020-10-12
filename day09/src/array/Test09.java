@@ -15,7 +15,7 @@ public class Test09 {
 		
 		for(int i=0 ; i<data.length/2; i++) {	//양 끝에 있는 값을 교환하는 것이기 때문에 중간까지만 바꿔줘도 무방
 			int temp = data[i];
-			data[i]=data[data.length-(i+1)];	//값 교환
+			data[i]=data[data.length-(i+1)];	//양쪽 값 교환
 			data[data.length-(i+1)]=temp;
 		}
 		for(int i=0; i<data.length; i++) {
