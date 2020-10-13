@@ -12,10 +12,8 @@ public class Test04 {
 		
 		//비교 범위를 줄여나간다
 		for(int k=data.length-1; k>0; k--) {
-		//오름차순이니까 스왑 스왑하면 맨 오른쪽에 가장 큰 수가 위치한다.
-			
+		//오름차순이니까 스왑 스왑하면 맨 오른쪽에 가장 큰 수가 위치한다.	
 			for(int i=0;i<k;i++) {
-			
 				if(data[i]>data[i+1])
 				{
 					int temp = data[i];
