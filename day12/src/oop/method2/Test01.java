@@ -1,4 +1,4 @@
-package opp.method2;
+package oop.method2;
 
 public class Test01 {
 	public static void main(String[] args) {
