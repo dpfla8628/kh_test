@@ -34,6 +34,7 @@ public class Game {
 		if(money<0) return;
 		this.money = money;
 	}
+	
 
 	//생성자 2개 - (ooxx),(oooo)
 	//=> 생성자 오버로딩(over loading)
