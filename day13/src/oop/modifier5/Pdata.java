@@ -1,4 +1,4 @@
-package opp.modifier5;
+package oop.modifier5;
 
 public class Pdata {
 	private String name;

@@ -1,4 +1,4 @@
-package opp.constructor3;
+package oop.constructor3;
 
 public class Game {
 	private String id, job;
@@ -35,10 +35,12 @@ public class Game {
 		this.money = money;
 	}
 
+	//생성자 2개 - (ooxx),(oooo)
+	//=> 생성자 오버로딩(over loading)
 	public Game(String id, String job) {
-		this.setId(id);
-		this.setJob(job);
-		this.setLevel(0);
+		//두개의 생성자의 코드가 겹치기 때문에
+		//아래에 있는 매개변수 4개짜리의 생성자를 부른다.
+		this(id,job,1,0);
 	}
 	
 	public Game(String id, String job, int level, int money) {

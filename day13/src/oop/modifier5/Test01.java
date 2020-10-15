@@ -1,4 +1,4 @@
-package opp.modifier5;
+package oop.modifier5;
 
 public class Test01 {
 	public static void main(String[] args) {
