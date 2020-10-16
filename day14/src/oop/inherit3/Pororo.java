@@ -3,6 +3,10 @@ package oop.inherit3;
 //하위클래스, 자식클래스
 //: 부모클래스를 상속받아 기능 확장(extends)
 public class Pororo extends Doll{
+	//부모 클래스에 생성자가 있으면 자식인 나도 있어야 한다.
+	public Pororo(String name) {
+		super(name);//꼭! 부모클래스에 데이터를 넘겨줘야 상속 가능!
+	}
 	//상위 클래스에서 변수 2개, 메소드 1개 상속 완료
 	public void nag() {
 		System.out.println("조심해 크롱!");
