@@ -26,9 +26,9 @@ public class Test01 {
 		System.out.println(com);
 		
 		switch(com) {
-		case RSP.가위 : System.out.println("가위"); break;
-		case RSP.바위 :System.out.println("바위");break;
-		case RSP.보 :System.out.println("보");break; 
+		case RSP.가위 : System.out.println("가위!"); break;
+		case RSP.바위 :System.out.println("바위!");break;
+		case RSP.보 :System.out.println("보!");break; 
 		}
 		
 	}
