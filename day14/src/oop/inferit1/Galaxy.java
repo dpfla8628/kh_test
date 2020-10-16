@@ -16,8 +16,8 @@ public class Galaxy {
 	public void camera() {
 		System.out.println("카메라 촬영!");
 	}
-	public void siri() {
-		System.out.println("시리야!");
+	public void bixby() {
+		System.out.println("하이 빅스비");
 	}
 
 }
