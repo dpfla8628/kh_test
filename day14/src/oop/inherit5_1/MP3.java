@@ -1,4 +1,4 @@
-package oop.inherit6;
+package oop.inherit5_1;
 
 //클래스에 final이 붙으면 더이상 상속 불가
 public final class MP3 extends MediaFile{

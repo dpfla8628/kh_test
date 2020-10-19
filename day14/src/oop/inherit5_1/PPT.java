@@ -1,4 +1,4 @@
-package oop.inherit6;
+package oop.inherit5_1;
 
 public final class PPT extends File{
 	private int size;//size=1

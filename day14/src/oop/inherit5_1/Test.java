@@ -1,4 +1,4 @@
-package oop.inherit6;
+package oop.inherit5_1;
 
 public class Test {
 	public static void main(String[] args) {
