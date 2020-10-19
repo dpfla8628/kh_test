@@ -1,4 +1,5 @@
 package oop.poly1;
+//polymorphism 다형성
 
 public abstract class Phone {
 	
