@@ -1,4 +1,4 @@
-package oop.inherit6;
+package oop.inherit6_abstract;
 
 public class PPT extends File{
 	

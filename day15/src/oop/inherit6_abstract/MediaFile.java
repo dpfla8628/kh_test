@@ -1,4 +1,4 @@
-package oop.inherit6;
+package oop.inherit6_abstract;
 
 //추상클래스 장점
 //하위 클래스에서 오버로드를 빠르게 할 수 있다!

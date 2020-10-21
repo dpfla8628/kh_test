@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class Test10_1 {
 		public static void main(String[] args) {
 			int[] data = new int[] {10, 20, 30, 40, 50};
+			
+			
 			Scanner scan = new Scanner(System.in);
 			System.out.print("회전시킬 칸 수 입력 : ");
 			int num = scan.nextInt();

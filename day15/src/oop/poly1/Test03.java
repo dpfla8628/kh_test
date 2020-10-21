@@ -17,6 +17,7 @@ public class Test03 {
 	//어짜피 상속도 되어있고, 재정의도 되어 있으니까 그냥 모두 Phone이라고 생각하자!
 	// - 뭐든 뽑아서 Phone 변수에 저장하면 되지 않겠는가?
 	//Phone phone = ZFlip객체 or V60객체 or IPhone객체;
+	
 	Phone phone;
 	
 	if(number == 7) {//ZFlip
