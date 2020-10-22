@@ -2,6 +2,13 @@ package api.lang.string;
 
 public class Test01 {
 	public static void main(String[] args) {
+		/*
+		char[] ch = new char[] {'h', 'e', 'l', 'l', 'o', ' ', 'j', 'a', 'v', 'a'};
+		String b = new String(ch);
+		
+		byte[] by = new byte[] {'h', 'e', 'l', 'l', 'o', ' ', 'j', 'a', 'v', 'a'};
+		String c = new String(by);
+		*/
 		String a = new String("Hello java");
 		String b = new String("hello java");
 		
