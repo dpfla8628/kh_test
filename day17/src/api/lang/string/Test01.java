@@ -5,6 +5,7 @@ public class Test01 {
 		/*
 		char[] ch = new char[] {'h', 'e', 'l', 'l', 'o', ' ', 'j', 'a', 'v', 'a'};
 		String b = new String(ch);
+							=ch.toString
 		
 		byte[] by = new byte[] {'h', 'e', 'l', 'l', 'o', ' ', 'j', 'a', 'v', 'a'};
 		String c = new String(by);
