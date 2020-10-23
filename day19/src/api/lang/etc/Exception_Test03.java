@@ -2,7 +2,7 @@ package api.lang.etc;
 
 import java.io.IOException;
 
-public class Test03 {
+public class Exception_Test03 {
 	public static void main(String[] args) throws IOException {
 	
 		//java.lang.Runtime 클래스
@@ -12,14 +12,10 @@ public class Test03 {
 		
 		Runtime run = Runtime.getRuntime();
 		
-		try {
-			run.exec("notepad.exe");
-			run.exec("calc.exe");
-			run.exec("cmd /c start http://www.naver.com");
-		}
-		catch(Exception e) {
-			System.err.println("명령이 원활하게 실행되지 않았습니다");
-			e.printStackTrace();
-		}		
+		//exec() : 외부 명령을 실행
+		//run.exec("notepad.exe");	
+		//run.exec("calc.exe");
+		run.exec("cmd /c start http://www.google.com");
+		
 	}
 }
