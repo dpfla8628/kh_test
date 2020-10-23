@@ -20,11 +20,11 @@ public class Test02 {
 		// 2. 월을 5월로 변경
 		// 3. 일을 3일로 변경
 		
-		c.set(Calendar.YEAR,2021);
-		c.set(Calendar.MONTH,4);//설정할 때 -1
-		c.set(Calendar.DATE,3);
+		//c.set(Calendar.YEAR,2021);
+		//c.set(Calendar.MONTH,4);//설정할 때 -1
+		//c.set(Calendar.DATE,3);
 		
-		//=c.set(2021,4,3);
+		c.set(2021,4,3);
 		
 		
 		//.getTime() : Calendar의 날짜 정보를 Date로 옮김
