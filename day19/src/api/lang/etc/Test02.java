@@ -19,8 +19,19 @@ public class Test02 {
 		System.out.println("time : "+time);
 		
 		//프로그램 종료
-		System.exit(0);
-		System.out.println("hello");//출력 불가
+		//System.exit(0);
+		//System.out.println("hello");//출력 불가
+		
+		//운영체제의 각종 상태 불러오기
+		//getProperty
+		System.out.println(System.getProperties());
+		//os.name에 연결된 value를 불러와라
+		System.out.println(System.getProperty("os.name"));
+		System.out.println(System.getProperty("os.version"));
+		//자바 버전
+		System.out.println(System.getProperty("java.specification.version"));
+		//언어
+		System.out.println(System.getProperty("user.language"));
 		
 	}
 
