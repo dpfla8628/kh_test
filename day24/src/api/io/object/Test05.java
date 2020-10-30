@@ -14,7 +14,7 @@ public class Test05 {
 		
 		Student stu = new Student("홍길동",90);
 		
-		File target = new File("file","numbers3.kh");
+		File target = new File("file","student.kh");
 		FileOutputStream out = new FileOutputStream(target);
 		BufferedOutputStream buffer = new BufferedOutputStream(out);
 		ObjectOutputStream object = new ObjectOutputStream(buffer);
