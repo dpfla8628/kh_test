@@ -1,0 +1,73 @@
+[1]
+
+
+<1> 오버라이딩 성립 요건
+:메소드의 모든 것이 같아야 한다(반환형, 이름, 매개변수, 접근제한, 예외)
+
+<2> List에서 sort를 사용하려고 할 때
+Book 객체의 title 문자열을 기준으로 오름차순 정렬하는 비교 객체(Comparator)를 만드세요
+정답)Test1_02
+
+<3> 인터페이스의 특징
+-모든 인터페이스의 메소드는 묵시적으로 public abstract 이다.
+-필드는 묵시적으로 public static final이다.
+-객체 생성은 하지 못하지만, 참조형 타입으로서는 사용 가능하다.
+
+<4>	List 계열의 컬렉션 클래스들의 주요 메소드에 대한 설명
+-add(Object obj) : 주어진 객체를 맨 끝에 추가
+-set(int index, Object obj) : 주어진 인덱스에 저장된 객체를 주어진 객체로 바꿈
+-contains(Object obj) : 주어진 객체가 저장되어 있는지 여부
+-size() : 저장되어 있는 전체 객체 수를 리턴
+-get(int index) : 주어진 인덱스에 저장된 객체를 리턴
+
+
+
+
+
+[2]
+
+
+<1>
+public void fileUpload() {
+	int port = 3000;
+	String serverIP;
+
+	try {
+	serverIP = InetAddress.getLocalHost().getHostAddress();
+	Socket socket = new Socket(serverIP, port);
+}}
+
+=>
+	명시된 서버의 IP주소가 사용되지 않았음.
+	Socket socket = new Socket("195.168.20.34", port);
+
+<2>
+-직렬화 선언
+public class Book implements Serializable{
+정답) Book 33~
+
+<3>
+정답)Test2_03
+ArrayList 를 사용하여 Book 객체 여러개의 값들을 추가 저장하는 프로그램을 구현하기 위해 다음의 요구하는 기능에 대한 메소드를 작성하시오. 요구된 ArrayList 클래스에 Book 만 저장할수 있도록 제네릭스를 사용하는 객체 생성구문을 [원인](5점)에 기술하고, 요구된 메소드 코드를 [조치내용](20점)에 기술하시오. (25점)
+[클라이언트용 프로그래밍 실행 순서]
++ fileSave() : void
+=> 2번 문항의 [원인]에 기술한 Book 객체만 저장할 수 있는 ArrayList bookList 객체를 생성한다.
+=> bookList 에 아래의 5개의 Book 객체를 리스트에 저장한다.
+Book("자바를 잡아라", 30000));
+Book("오라클 정복", 35000));
+Book("웹표준 2.0", 27500));
+Book("자바 Servlet/JSP", 28000));
+Book("ajax 사용법", 15000));
+=> 저장된 bookList 정보 출력 확인한다.
+
+<4>
+list.remove(1); -> 삭제됨
+list.remove(new Fruit("사과","달콤"); ->삭제 안됨
+	=>equals 재정의 필요
+
+
+
+
+
+
+
