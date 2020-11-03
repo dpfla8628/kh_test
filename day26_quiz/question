@@ -37,7 +37,7 @@ public void fileUpload() {
 	Socket socket = new Socket(serverIP, port);
 }}
 
-=>
+문제점=>
 	명시된 서버의 IP주소가 사용되지 않았음.
 	Socket socket = new Socket("195.168.20.34", port);
 
