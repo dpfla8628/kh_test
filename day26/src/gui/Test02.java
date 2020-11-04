@@ -31,9 +31,6 @@ public class Test02 {
 		//frame에 layout을 설정
 		frame.setLayout(layout);
 		
-		GridLayout g = new GridLayout();
-		frame.add(new Button("1"));
-		
 		JButton bt = new JButton("눌러봐!");
 		JButton bt2 = new JButton("2번째버튼");
 		
