@@ -1,6 +1,7 @@
 package thread;
 
 public class Test02 {
+	//주요 작업은 메인이 부가적인 작업은 Thread가 처리
 	public static void main(String[] args) {
 		//두가지 작업을 동시에 진행(쓰레드 생성) : 멀티스레드
 		//빨래 돌리기 -> 빨래 넣기

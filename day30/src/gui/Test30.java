@@ -60,7 +60,7 @@ class MyFrame30 extends JFrame{
 						} catch (InterruptedException e1) {
 					}
 				}
-			}).start();
+			}).start();//****
 		}
 	});
 }

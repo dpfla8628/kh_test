@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 class LoginFrame extends JFrame{//JFrame을 확장해서 로그인 화면으로 만들겠다
@@ -33,7 +34,7 @@ class LoginFrame extends JFrame{//JFrame을 확장해서 로그인 화면으로 
 	//컴포넌트 배치 기능, 이벤트 설정, 메뉴 설정
 	//주인공(frame)은 this라고 부르면 된다
 	public void place() {
-		this.setLayout(new GridLayout(3,1,5,5));
+		this.setLayout(new GridLayout(3,1));
 		this.add(a);
 		this.add(b);
 		this.add(c);
@@ -47,8 +48,8 @@ class LoginFrame extends JFrame{//JFrame을 확장해서 로그인 화면으로 
 		c.add(bt);
 		
 		//폭 설정
-		lb1.setPreferredSize(new Dimension(100,50));
-		lb2.setPreferredSize(new Dimension(100,50));
+//		lb1.setPreferredSize(new Dimension(100,50));
+//		lb2.setPreferredSize(new Dimension(100,50));
 	}
 	
 //---------------------------------------------------------------------	
