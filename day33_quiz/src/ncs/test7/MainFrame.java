@@ -1,3 +1,10 @@
+//클래스						메소드
+//ScoreFrame 				+ScoreFrame()
+//ScoreFrame$ActionHandler	+actionPerformed(event:ActionEvent)
+//MainFrame					+main(args:String[]):void
+
+
+
 package ncs.test7;
 
 import java.awt.BorderLayout;
