@@ -1,6 +1,3 @@
-
-//목표 : select count(*) from person을 자바에서 실행한 뒤 결과 출력
-
 package util;
 
 import java.sql.Connection;
