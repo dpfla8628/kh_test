@@ -2,6 +2,10 @@ package beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import util.JdbcUtil;
 
@@ -60,5 +64,58 @@ public class WorkerDao {
 		
 		return count > 0;
 	}
+	
+	public List<WorkerDto> select() throws ClassNotFoundException, SQLException{
+		Connection con = JdbcUtil.getConnection("web", "web");
+		String sql = "select * from worker";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		
+		List<WorkerDto> list = new ArrayList<>();
+		while(rs.next()) {
+			WorkerDto dto = new WorkerDto();
+			
+			dto.setWorker_name(rs.getString("worker_name"));
+			dto.setWorker_no(rs.getInt("worker_no"));
+			dto.setHire_date(rs.getString("hire_date"));
+			dto.setPosition(rs.getString("position"));
+			dto.setSalary(rs.getInt("salary"));
+			
+			list.add(dto);
+		}
+		con.close();
+		
+		return list;
+		
+	}
+	
+	public List<WorkerDto> salary_search(int salary1, int salary2) throws ClassNotFoundException, SQLException{
+		Connection con = JdbcUtil.getConnection("web", "web");
+		String sql = "select * from worker where salary between ? and ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, salary1);
+		ps.setInt(2, salary2);
+		ResultSet rs = ps.executeQuery();//select전용 실행 명령
+		
+		//비어있는 리스트 준비
+		List<WorkerDto> list = new ArrayList<WorkerDto>();
+		
+		while(rs.next()) {
+			WorkerDto dto = new WorkerDto();
+			//이 데이터값을 바로 print하는게 아니라, dto에 데이터를 넣어주고 이를 list로 만들어주자
+			dto.setWorker_name(rs.getString("worker_name"));
+			dto.setWorker_no(rs.getInt("worker_no"));
+			dto.setHire_date(rs.getString("hire_date"));
+			dto.setPosition(rs.getString("position"));
+			dto.setSalary(rs.getInt("salary"));
+			
+			list.add(dto);//그리고 이 데이터를 리스트에 넣자
+		}
+		con.close();
+		
+		return list;
+		
+	}
+
 }
 

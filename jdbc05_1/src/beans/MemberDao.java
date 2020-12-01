@@ -2,6 +2,10 @@ package beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import util.JdbcUtil;
 
@@ -66,4 +70,70 @@ public class MemberDao {
 		
 		return count > 0;
 	}
+	
+	//회원 조회 메소드
+	//실행하면 DB에서 회원목록을 조회한 뒤 List<DTO>으로 반환하도록 구현
+	
+	public List<MemberDto> select() throws ClassNotFoundException, SQLException {
+		Connection con = JdbcUtil.getConnection("web", "web");
+		String sql = "select * from member";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+	
+		List<MemberDto> list = new ArrayList<>();
+		while(rs.next()) {
+			MemberDto dto = new MemberDto();
+			dto.setMember_no(rs.getInt("member_no"));
+			dto.setMember_id(rs.getString("member_id"));
+			dto.setMember_pw(rs.getString("member_pw"));
+			dto.setMember_nick(rs.getString("member_nick"));
+			dto.setMember_birth(rs.getString("member_birth"));
+			dto.setMember_auth(rs.getString("member_auth"));
+			dto.setMember_point(rs.getInt("member_point"));
+			dto.setMember_join(rs.getDate("member_join"));
+		
+			list.add(dto);
+		}
+		con.close();
+		
+		return list;
+		
+		
+	}
+	
+	
+	public List<MemberDto> search(String member_nick) throws ClassNotFoundException, SQLException{
+		Connection con = JdbcUtil.getConnection("web", "web");
+		String sql = "select * from member where instr(member_nick,?)>0";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, member_nick);
+		ResultSet rs = ps.executeQuery();
+		
+		List<MemberDto> list = new ArrayList<>();
+		while(rs.next()) {
+			MemberDto dto = new MemberDto();
+			dto.setMember_no(rs.getInt("member_no"));
+			dto.setMember_id(rs.getString("member_id"));
+			dto.setMember_pw(rs.getString("member_pw"));
+			dto.setMember_nick(rs.getString("member_nick"));
+			dto.setMember_birth(rs.getString("member_birth"));
+			dto.setMember_auth(rs.getString("member_auth"));
+			dto.setMember_point(rs.getInt("member_point"));
+			dto.setMember_join(rs.getDate("member_join"));
+		
+			list.add(dto);
+		}
+		con.close();
+		
+		return list;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }

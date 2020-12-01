@@ -119,4 +119,72 @@ public class PersonDao {
 		//준비완료된 목록을 반환하겠다!
 		return list;
 	}
+	
+	//이름을(person_name) 조회하는 메소드
+	// 이름(String)을 전달받아서 조회한 뒤 사람 목록(List<PersonDto>)를 반환 
+	
+	public List<PersonDto> search(String person_name) throws Exception{
+		Connection con = JdbcUtil.getConnection("kh", "kh");
+		String sql = "select * from person where person_name =?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, person_name);
+		ResultSet rs = ps.executeQuery();
+		
+		//어차피 목록이나 검색이나 변환 과정은 같다(데이터가 많냐 적냐의 차이)
+		List<PersonDto> list = new ArrayList<>();
+		while(rs.next()) {
+			PersonDto dto = new PersonDto();
+			
+			dto.setPerson_no(rs.getInt("person_no"));
+			dto.setPerson_name(rs.getString("person_name"));
+			dto.setJavascore(rs.getInt("javascore"));
+			dto.setDbscore(rs.getInt("dbscore"));
+			dto.setGender(rs.getString("gender"));
+			dto.setRegist_date(rs.getDate("regist_date"));
+			
+			list.add(dto);
+			
+		}
+		
+		con.close();
+		return list;
+	}
+	
+	//자바점수(javascore)를 조회하는 메소드
+	//자바점수(int)전달 받아서 조회한 뒤 사람 목록(List<PersonDto>)를 반환
+	
+	public List<PersonDto> search(int javascore) throws Exception{
+		Connection con = JdbcUtil.getConnection("kh", "kh");
+		
+		String sql = "select * from person where javascore = ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, javascore);
+		ResultSet rs = ps.executeQuery();
+	
+		//이 뒤는 목록, 다른 검사와 동일하다
+		List<PersonDto> list = new ArrayList<>();
+		while(rs.next()) {
+			PersonDto dto = new PersonDto();
+			
+			dto.setPerson_no(rs.getInt("person_no"));
+			dto.setPerson_name(rs.getString("person_name"));
+			dto.setJavascore(rs.getInt("javascore"));
+			dto.setDbscore(rs.getInt("dbscore"));
+			dto.setGender(rs.getString("gender"));
+			dto.setRegist_date(rs.getDate("regist_date"));
+			
+			list.add(dto);
+			
+		}
+		
+		con.close();
+		return list;
+	
+	 }
+	
+	
+	
+	
+	
+	
 }
