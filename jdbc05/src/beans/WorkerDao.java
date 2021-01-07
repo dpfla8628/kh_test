@@ -2,7 +2,10 @@ package beans;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import util.JdbcUtil;
 
@@ -34,4 +37,59 @@ public class WorkerDao {
 		System.out.println("성공!");
 		con.close();		
 	}
+	public boolean update(WorkerDto dto) throws SQLException, ClassNotFoundException {		
+		Connection con = JdbcUtil.getConnection("web","web");
+		String sql = "update worker set worker_name = ?, hire_date = ? where worker_no = 26 ";
+		
+		PreparedStatement ps = con.prepareStatement(sql);
+
+		ps.setString(1, dto.getWorker_name());
+		ps.setString(2, dto.getHire_date());
+		
+		int result = ps.executeUpdate();
+		
+		con.close();		
+
+//		if(result >0 ) return true;
+//		else return false;
+		return result>0;
+	
+	}
+	
+	
+	public boolean delete(int worker_no) throws ClassNotFoundException, SQLException {
+		Connection con = JdbcUtil.getConnection("web","web");
+		String sql = "delete worker where worker_no =?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setInt(1, worker_no);
+		
+		int result = ps.executeUpdate();
+		con.close();
+		
+		return result>0;
+	}
+	
+	public List<WorkerDto> select() throws ClassNotFoundException, SQLException{
+		Connection con = JdbcUtil.getConnection("web", "web");
+		String sql = "select * from worker";
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ResultSet rs = ps.executeQuery();
+		
+		List<WorkerDto> list = new ArrayList<>();
+		
+		while(rs.next()) {
+			WorkerDto dto = new WorkerDto();
+			dto.setWorker_name(rs.getString("worker_name"));
+			dto.setHire_date(rs.getString("hire_date"));
+			
+			list.add(dto);
+		}
+		
+		con.close();
+		
+		return list;
+	}
+	
 }
