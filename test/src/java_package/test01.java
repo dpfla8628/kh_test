@@ -12,7 +12,7 @@ public class test01 {
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","web","web");
 		
-		String id = "admin";
+		String id = "admin123";
 		String pass = "admin123";
 		String nick = "운영자";
 		String birth = "2020-11-11";
