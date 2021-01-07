@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<!--상대경로 <-> 절대경로 href="/web/css/common.css" -->
+
+</head>
+<body>
+	<!-- 현 위치 : "http://localhost:8888/web/worker/join.html" -->
+
+	<!-- = "http://localhost:8888/web/worker/join.do" -->
+	<!-- = "/web/worker/join.do" -->
+	<form action="join.do" method="post">
+		
+		근무자 이름 : <input type="text" name="worker_name">
+		<br>
+		고용일 : <input type="date" name="hire_date">
+		<!-- 날짜는 무조건 date? ㄴㄴ 근데 우리는 db에 날짜 정보를 10바이트로 설정했으니까 가능 ㅇㅇ -->
+		<br>
+		급여 : <input type="text" name="salary">
+		<br>
+		직급 : 
+		<select name="position">
+			<option>인턴</option>
+			<option>사원</option>
+			<option>주임</option>
+			<option>대리</option>
+			<option>과장</option>
+			<option>차장</option>
+			<option>부장</option>
+			<option>임원</option>
+			<option>사장</option>
+		</select>
+		<hr>
+		<input type="submit" value="가입">
+	</form>
+</body>
+</html>

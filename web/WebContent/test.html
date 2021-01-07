@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		form을 이용해서 test.do로 데이터 전송
+		
+		- get : 가벼운 일반 요청 (헤더-정보+데이터)
+		- post : 무거운 데이터 전달(헤더-정보 , ^바디^-데이터) => 한글을 되돌리는 복원하는 코드가 필요하다!!(전송이 아스키로 와서)
+				
+				header : 정보를 보관 / 인코딩 기본 설정 되어있음
+				body : 데이터를 보관 
+	 -->
+	 <form action="http://localhost:8888/web/test.do" method="post">
+		a:<input type="text" name="a">
+		<br>
+		b:<input type="text" name="b">
+		<br>
+		c:
+		<select name="c">
+			<option>java</option>
+			<option>android</option>
+			<option>hadoop</option>
+		</select>	
+		<hr>
+		<input type="submit" value="전송">
+	 </form>
+</body>
+</html>

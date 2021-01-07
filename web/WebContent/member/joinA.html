@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- form안에 있는 name들만 날라간다! name이름은 똑같이 써주자~ --> 
+	<form action="http://localhost:8888/web/member/joinA.do" method="post">
+		아이디 : <input type="text" name="member_id" required><br>
+		비밀번호 : <input type="password" name="member_pw" required><br>
+		닉네임 : <input type="text" name="member_nick" required><br>
+		생년월일 : <input type="date" name="member_birth" required><br>
+		<hr>
+		<input type="submit" value="가입">
+	</form>
+</body>
+</html>
