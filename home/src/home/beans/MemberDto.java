@@ -80,5 +80,7 @@ public class MemberDto {
 			this.member_join = member_join;
 		}
 		
-		
+		public boolean is(String member_auth) {
+			return this.member_auth!=null && this.member_auth.equals(member_auth);
+		}
 }

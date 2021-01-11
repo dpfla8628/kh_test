@@ -1,4 +1,4 @@
-package home.beans;
+package home.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

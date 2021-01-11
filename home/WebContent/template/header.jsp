@@ -67,6 +67,7 @@
 			"/template/header.jsp>인 상대경로로 써줘도 된다
 			
 			context경로
+			=<a href="../">홈</a>
 			=<a href="home/index.jsp">홈</a>
 			=<a href="< %=request.getContextPath()%>/index.jsp">홈</a>
 			=<a href="< %=request.getContextPath()%>">홈</a>
@@ -75,13 +76,12 @@
 			<a href="<%=request.getContextPath()%>">홈</a>
 			<a href="<%=request.getContextPath()%>/member/join.jsp">회원가입</a>
 			<a href="<%=request.getContextPath()%>/member/login.jsp">로그인</a>
-			<a href="#">게시판</a>
 			<!-- 회원 메뉴 -->
 			<%}else{ %>
-			<a href="#">홈</a>
+			<a href="<%=request.getContextPath()%>">홈</a>
 			<a href="<%=request.getContextPath()%>/member/logout.do">로그아웃</a>
 			<a href="<%=request.getContextPath()%>/member/my.jsp">내정보</a>
-			<a href="#">게시판</a>
+			<a href="<%=request.getContextPath()%>/member/board.jsp">게시판</a>
 			<%} %>
 		</nav>
 	<section>

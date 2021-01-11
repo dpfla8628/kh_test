@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import home.util.JdbcUtil;
+
 
 public class MemberDao {
 	
@@ -80,6 +82,10 @@ public class MemberDao {
 	
 	//2차 검사
 	public List<MemberDto> select(String type, String keyword) throws Exception{
+		
+		//둘중 하나라도 없으면 null반환
+		if(type==null || keyword==null) return null;
+		
 		Connection con = JdbcUtil.getConnection(USERID,USERPW);
 		
 		String sql = "select * from member where instr(#1,?)>0 order by member_id";
@@ -154,12 +160,31 @@ public class MemberDao {
 	}
 	public boolean update(MemberDto dto) throws Exception{
 		Connection con = JdbcUtil.getConnection(USERID,USERPW);
-		String sql = "update member set member_pw=?, member_nick=?"
+		String sql = "update member set member_nick=?,member_birth=?"
+				+ "where member_no=? and member_pw=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		
+		ps.setString(1, dto.getMember_nick());
+		ps.setString(2, dto.getMember_birth());
+		ps.setInt(3, dto.getMember_no());
+		ps.setString(4, dto.getMember_pw());
+		
+		int count = ps.executeUpdate();
+		con.close();
+		return count>0;
+	}
+	//관리자용 회원 수정
+	public boolean a_update(MemberDto dto) throws Exception{
+		Connection con = JdbcUtil.getConnection(USERID,USERPW);
+		String sql = "update member set member_nick=?,member_birth=?,member_point=?,member_auth=?"
 				+ "where member_no=?";
 		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setString(1, dto.getMember_pw());
-		ps.setString(2, dto.getMember_nick());
-		ps.setInt(1, dto.getMember_no());
+		
+		ps.setString(1, dto.getMember_nick());
+		ps.setString(2, dto.getMember_birth());
+		ps.setInt(3, dto.getMember_point());
+		ps.setString(4, dto.getMember_auth());
+		ps.setInt(5, dto.getMember_no());
 		
 		int count = ps.executeUpdate();
 		con.close();
@@ -181,5 +206,44 @@ public class MemberDao {
 		return result;
 		
 	}
+	public boolean delete(int member_no) throws Exception{
+		Connection con = JdbcUtil.getConnection("web", "web");
+		String sql = "delete member where member_no=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, member_no);
+		int count = ps.executeUpdate();
+		
+		con.close();
+		
+		return count>0;
 	
+	}
+	public boolean editpw(int member_no , String member_pw, String new_pw) throws Exception{
+		Connection con = JdbcUtil.getConnection(USERID, USERPW);
+		String sql = "update member set member_pw = ? where member_no=? and member_pw=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1,new_pw);
+		ps.setInt(2, member_no);
+		ps.setString(3, member_pw);
+		
+		int count = ps.executeUpdate();
+		
+		con.close();
+		return count>0;
+	
+	}
+	//관리자용 비밀번호 변경
+	public boolean a_editpw(int member_no ,String new_pw) throws Exception{
+		Connection con = JdbcUtil.getConnection(USERID, USERPW);
+		String sql = "update member set member_pw = ? where member_no=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1,new_pw);
+		ps.setInt(2, member_no);
+		
+		int count = ps.executeUpdate();
+		
+		con.close();
+		return count>0;
+	
+	}
 }

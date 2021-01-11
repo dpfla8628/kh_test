@@ -5,10 +5,7 @@
 <jsp:include page="/template/header.jsp"></jsp:include>
 
 <%
-	//세션에 회원번호가 저장되어 있습니다
-	//이 페이지에서는 회원의 모든 정보를 출력해야 하기 때문에 디비를 조회하여 모든 정보를 불러와 출력하자
-	//int member_no = Integer.parseInt(session.getAttribute("check").toString());
-	int member_no = (int)session.getAttribute("check");
+	int member_no = Integer.parseInt(request.getParameter("member_no"));
 	MemberDao dao = new MemberDao();
 	MemberDto dto = dao.find(member_no);
 
@@ -44,14 +41,9 @@
 	
 	<!-- 각종 메뉴 -->
 	<div class="row center">
-		<a href="edit.jsp">정보 변경</a>
+		<a href="list.jsp">목록으로 돌아가기</a>
 	</div>
-	<div class="row center">
-		<a href="pw.jsp">비밀번호 변경</a>
-	</div>
-	<div class="row center">
-		<a href = "delete.do">회원 탈퇴하기</a>
-	</div>
+	
 </div>
 
 
