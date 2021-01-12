@@ -41,6 +41,8 @@ public class LoginServlet extends HttpServlet{
 				MemberDto m = dao.find(dto.getMember_id());
 				// + 로그인에 성공한 경우 세션에 check란 이름으로 사용자의 번호를 저장
 				req.getSession().setAttribute("check", m.getMember_no());
+				// + 로그린에 성공한 경우 세션에 auth란 이름으로 사용자의 권한을 저장
+				req.getSession().setAttribute("auth", m.getMember_auth());
 
 				//상대경로 : ("../");
 				//절대경로 : (req.getContextPath()+"/index.jsp");

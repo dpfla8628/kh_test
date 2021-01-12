@@ -246,4 +246,35 @@ public class MemberDao {
 		return count>0;
 	
 	}
+	
+	//랭킹 리스트
+	public List<MemberRankVO> getPointRank(int start, int end) throws Exception{
+		Connection con = JdbcUtil.getConnection(USERID, USERPW);
+		
+		String sql="select * from ("
+						+ "select M.*,"
+						+ "rank() over(order by member_point desc)rank"
+						+ " from member M"
+					+ ")where rank between ? and ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setInt(1, start);
+		ps.setInt(2, end);
+		ResultSet rs = ps.executeQuery();
+		
+		List<MemberRankVO> list = new ArrayList();
+		while(rs.next()) {
+			MemberRankVO vo = new MemberRankVO();
+			vo.setMember_id(rs.getString("member_id"));
+			vo.setMember_no(rs.getInt("member_no"));
+			vo.setMember_nick(rs.getString("member_nick"));
+			vo.setMember_auth(rs.getString("member_auth"));
+			vo.setMember_join(rs.getDate("member_join"));
+			vo.setMember_point(rs.getInt("member_point"));
+			vo.setRank(rs.getInt("rank"));
+			
+			list.add(vo);
+		}
+		con.close();
+		return list;
+	}
 }

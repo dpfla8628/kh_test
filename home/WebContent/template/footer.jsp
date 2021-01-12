@@ -12,7 +12,7 @@
 			 -->
 			<h5>세션 아이디 : <%=session.getId() %></h5>
 			<h5>check : <%=session.getAttribute("check") %></h5>
-			
+			<h5>auth : <%=session.getAttribute("auth") %></h5>
 		</footer>
 	</main>	
 </body>

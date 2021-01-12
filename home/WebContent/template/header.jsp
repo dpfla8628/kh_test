@@ -1,3 +1,4 @@
+<%@page import="home.beans.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -12,9 +13,13 @@
 	 : request.getContextPath() = /home
  -->
 <%
-	//사용자가 로그인 상태인지 계산하는 코드
-	//로그인 상태 : session에 check
-	boolean isLogin = session.getAttribute("check")==null;
+	//로그인 상태 : session 에 check 라는 이름의 값이 존재할 경우(null이 아닌 경우)
+	//로그아웃 상태 : session 에 check 라는 이름의 값이 존재하지 않을 경우(null인 경우)
+	boolean isLogin = session.getAttribute("check")!=null;
+
+	//사용자가 관리자인지 계산하는 코드
+	boolean isAdmin = isLogin && session.getAttribute("auth").equals("관리자");
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -58,7 +63,7 @@
 			<h1>JSP로 홈페이지 만들기</h1>
 		</header>
 		<nav>
-			<!-- 비회원 메뉴 -->
+			
 			<!-- 
 			상대경로 적절하지 않음!! template에서는 무조건 절대경로 사용자하자!
 			이 코드는 사용자가 보는 링크! "/home/index.jsp" 컨텍스트 경로까지 쓴 절대경로로 써주자
@@ -72,16 +77,25 @@
 			=<a href="< %=request.getContextPath()%>/index.jsp">홈</a>
 			=<a href="< %=request.getContextPath()%>">홈</a>
 			-->
-			<% if(isLogin){%>		
+			
+			<!-- 비회원 메뉴 -->
+			<% if(!isLogin){%>		
 			<a href="<%=request.getContextPath()%>">홈</a>
 			<a href="<%=request.getContextPath()%>/member/join.jsp">회원가입</a>
 			<a href="<%=request.getContextPath()%>/member/login.jsp">로그인</a>
+			<a href="<%=request.getContextPath()%>/board/list.jsp">게시판</a>
+			
 			<!-- 회원 메뉴 -->
 			<%}else{ %>
 			<a href="<%=request.getContextPath()%>">홈</a>
 			<a href="<%=request.getContextPath()%>/member/logout.do">로그아웃</a>
 			<a href="<%=request.getContextPath()%>/member/my.jsp">내정보</a>
-			<a href="<%=request.getContextPath()%>/member/board.jsp">게시판</a>
+			<a href="<%=request.getContextPath()%>/board/list.jsp">게시판</a>
+			<%} %>
+			
+			<!-- 관리자 메뉴 -->
+			<%if(isAdmin){ %>
+			<a href="<%=request.getContextPath()%>/admin/home.jsp">관리메뉴</a>
 			<%} %>
 		</nav>
 	<section>
