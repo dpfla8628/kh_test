@@ -74,4 +74,11 @@ public class BoardDto {
 	public boolean is(String board_header) {
 		return this.board_header != null && this.board_header.equals(board_header);
 	}
+	
+	public String getBoard_header_string() {
+		if(this.board_header==null)
+			return "";
+		else
+			return this.board_header;
+	}
 }

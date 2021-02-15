@@ -1,5 +1,5 @@
-<%@page import="beans.MemberDto"%>
-<%@page import="beans.MemberDao"%>
+<%@page import="movi.beans.MemberDto"%>
+<%@page import="movi.beans.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 

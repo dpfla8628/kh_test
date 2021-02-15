@@ -147,4 +147,6 @@ public class BoardDao {
 		con.close();	
 		return count>0;
 	}
+	
+	
 }

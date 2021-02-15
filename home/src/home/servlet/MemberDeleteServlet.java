@@ -12,7 +12,7 @@ import home.beans.MemberDao;
 import home.beans.MemberDto;
 
 @WebServlet(urlPatterns = "/member/delete.do")
-public class DeleteServlet extends HttpServlet{
+public class MemberDeleteServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {

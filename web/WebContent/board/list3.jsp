@@ -1,8 +1,8 @@
-<%@page import="beans.MemberDto"%>
-<%@page import="beans.MemberDao"%>
-<%@page import="beans.BoardDto"%>
+<%@page import="movi.beans.MemberDto"%>
+<%@page import="movi.beans.MemberDao"%>
+<%@page import="movi.beans.BoardDto"%>
 <%@page import="java.util.List"%>
-<%@page import="beans.BoardDao"%>
+<%@page import="movi.beans.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 

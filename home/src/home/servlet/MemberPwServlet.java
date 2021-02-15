@@ -12,7 +12,7 @@ import home.beans.MemberDao;
 import home.beans.MemberDto;
 
 @WebServlet(urlPatterns = "/member/pw.do")
-public class PwServlet extends HttpServlet{
+public class MemberPwServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 

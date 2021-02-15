@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/member/logout.do")
-public class LogoutServlet extends HttpServlet{
+public class MemberLogoutServlet extends HttpServlet{
 	@Override
 	//매우 간단한 작업이니까 get으로 보냄
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

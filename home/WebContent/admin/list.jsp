@@ -36,7 +36,6 @@
 	});
 </script>
 
-
 <div class="outbox" style="width:800px">
 	
 	<!-- 제목 -->

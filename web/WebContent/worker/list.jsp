@@ -1,6 +1,6 @@
-<%@page import="beans.WorkerDto"%>
+<%@page import="movi.beans.WorkerDto"%>
 <%@page import="java.util.List"%>
-<%@page import="beans.WorkerDao"%>
+<%@page import="movi.beans.WorkerDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- 

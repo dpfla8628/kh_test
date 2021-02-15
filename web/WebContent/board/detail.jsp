@@ -1,5 +1,5 @@
 
-<%@page import="beans.BoardDto"%>
+
 <%@page import="beans.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>

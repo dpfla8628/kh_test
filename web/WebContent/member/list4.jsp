@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="beans.MemberDto"%>
-<%@page import="beans.MemberDao"%>
+<%@page import="movi.beans.MemberDto"%>
+<%@page import="movi.beans.MemberDao"%>
 <%@ page import="java.util.*" %>
 <%
 	//데이터를 불러오는 코드(데이터베이스에서 select를 수행하기 위한 준비 코드를 작성)

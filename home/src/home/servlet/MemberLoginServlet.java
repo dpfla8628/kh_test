@@ -14,7 +14,7 @@ import home.beans.MemberDao;
 import home.beans.MemberDto;
 
 @WebServlet(urlPatterns = "/member/login.do")
-public class LoginServlet extends HttpServlet{
+public class MemberLoginServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
