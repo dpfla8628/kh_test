@@ -26,6 +26,9 @@ public class NexacroListServlet extends HttpServlet{
 		
 		//목표 : 넥사크로 클라이언트에게 데이터셋을 전달한다(= 넥사크로 전용 응답객체에 데이터셋을 첨부한다)
 		// - 데이터셋(Dataset) → PlatformData → HttpPlatformResponse → 클라이언트
+		
+		//DataSet ds = new DataSet("emp");
+		//ds.addColumn("emp_no",DataTypes.String,256);
 		try {
 			//1. 데이터셋 생성 및 데이터 추가(EmpDao 사용)
 			EmpDao empDao = new EmpDao();

@@ -66,7 +66,7 @@ public class EmpDao {
 		Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 		
 		for(int row = 0; row < ds.getRowCount(); row++) {
-			String sql = "merge into emp e using dual on(e.emp_no = ?) " 
+			String sql = "merge into emp e using dual on(e.emp_no = ?) " //만약 번호가 있다면!
 							+ "when matched then " 
 							+" update set emp_name=?, position=?, department=?, hire_date=?, emp_phone=?, emp_email=? " 
 							+" when not matched then " 

@@ -39,6 +39,7 @@
 
             obj = new Edit("Edit00_00","150","106","116","20",null,null,null,null,null,null,this);
             obj.set_taborder("2");
+            obj.set_readonly("true");
             this.addChild(obj.name, obj);
 
             obj = new Edit("Edit00_00_00","150","176","116","20",null,null,null,null,null,null,this);
@@ -243,13 +244,16 @@
         //					"personDs=emp" => 서버에서 전달되는 emp이름의 데이터셋을 personDs로 저장해라
         //		-args : 요청에 첨부할 기타 설정값.
         //		-callback : 모든 통신이 끝난 뒤 실행될 예약 함수 이름.
+
+        //form을 onload할 때도 같은 효과주도록 설정
         this.loadBtn_onclick = function(obj,e)
         {
         	var id = "empList";
         	var url = "Origin::list.do";
+        	//클라이언트와 서버의 주소를 통일시키기 위해 Origin을 동일하게 만든다
         	//var url = "http://localhost:8888/nexacro-server/list.do";
         	var reqDs = "";
-        	var resDs = "personDs=emp";
+        	var resDs = "personDs=emp";//emp를 personDs에 저장해라
         	var args="";
         	var callback="";
 
@@ -274,7 +278,8 @@
         	this.transaction(id,url,reqDs,resDs,args,callback);
         };
 
-
+        //배포(deploy) 필요!!
+        //이클립스에서 호환을 위해 validation에서 json체크 해제
         });
         
         // Regist UI Components Event
