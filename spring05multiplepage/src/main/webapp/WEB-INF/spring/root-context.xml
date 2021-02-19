@@ -3,7 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<!-- 3.[스프링 전체 설정] -->
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
 </beans>

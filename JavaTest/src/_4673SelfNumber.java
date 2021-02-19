@@ -1,4 +1,4 @@
-public class SelfNumber_4673 {
+public class _4673SelfNumber {
  
 	public static void main(String[] args) {
  

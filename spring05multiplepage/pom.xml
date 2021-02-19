@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- 
+	1. [프로젝트 설정] 필요한 도구가 있는지 확인
 	이 파일에는 프로젝트의 정보가 들어간다.
 	project 태그 내에 설정하도록 되어 있다.
 	자동완성이나 문법검사를 위해 주소 형태(CDN)로 양식을 제공하며, 이를 xmlns라고 부른다. 
@@ -19,9 +20,9 @@
 		- version : 현재 어플리케이션의 버전(x.y.z)
 	-->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>kr.or.iei</groupId>
-	<artifactId>spring01</artifactId>
-	<name>spring01</name>
+	<groupId>com.kh</groupId>
+	<artifactId>spring05</artifactId>
+	<name>spring05multiplepage</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
@@ -42,7 +43,7 @@
 		= 여기에 의존성 정보를 작성하면 Maven이 자동으로 다운로드를 받는다.
 		= 더이상 직접 라이브러리를 다운받아서 추가할 필요가 없다.
 		= 기본적으로 Maven은 사용자 폴더에 .m2라는 폴더를 만들고 의존성을 다운로드 한다.
-		= 필요하다면 우리가 원하는 위치로 변경할 수 있어야 하며, 변경해야 충돌이 발생하지 않는다.
+		= 필요하다면 우리가 원하는 위치로 변경할 수 있어야 하며, 변경해야 충돌이 발생하지 않는다.ㄴ
 	 -->
 	 
 	<dependencies>

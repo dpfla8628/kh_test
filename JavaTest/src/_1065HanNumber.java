@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HanNumber_1065 {
+public class _1065HanNumber {
  
 	public static void main(String[] args) {
  

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class arravg_4344 {
+public class _4344arravg {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
