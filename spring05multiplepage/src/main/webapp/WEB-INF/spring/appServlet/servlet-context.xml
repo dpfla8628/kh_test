@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-	
+				<!-- RequentMapping --><!-- component-scan -->
 	<beans:bean name="/first" class="com.kh.spring05.controller.FirstController"></beans:bean>
 	<beans:bean name="/second" class="com.kh.spring05.controller.SecondController"></beans:bean>
 	<beans:bean name="/third" class="com.kh.spring05.controller.ThirdController"></beans:bean>
