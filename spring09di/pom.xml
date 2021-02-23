@@ -20,8 +20,8 @@
 	-->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kh</groupId>
-	<artifactId>spring07</artifactId>
-	<name>spring07home</name>
+	<artifactId>spring09</artifactId>
+	<name>spring09di</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
@@ -151,15 +151,7 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>       
-		
-		<!-- 오라클 드라이버 의존성 -->
-		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
-		    <artifactId>ojdbc8</artifactId>
-		    <version>21.1.0.0</version>
-		</dependency>
-				 
+		</dependency>        
 	</dependencies>
 	
 	<!-- 

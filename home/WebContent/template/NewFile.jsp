@@ -1,0 +1,1169 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+    <style>
+    
+    body {
+  background: #1E5799;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+}
+
+div {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.camera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.camera.-x {
+  transform: rotateX(-30deg);
+}
+.camera.-y {
+  trannsform: rotateY(0deg);
+}
+.under-sea {
+  transform: scale3d(0.4, 0.4, 0.4);
+}
+
+.blowing-bubbles .bubble:nth-child(1) {
+  left: -1px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5542ms -7529ms linear infinite;
+          animation: bubbles 5542ms -7529ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(2) {
+  left: -4px;
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 4844ms -994ms linear infinite;
+          animation: bubbles 4844ms -994ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(3) {
+  left: 40px;
+  width: 17px;
+  height: 17px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3804ms -5512ms linear infinite;
+          animation: bubbles 3804ms -5512ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(4) {
+  left: -16px;
+  width: 15px;
+  height: 15px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6171ms -3041ms linear infinite;
+          animation: bubbles 6171ms -3041ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(5) {
+  left: 34px;
+  width: 24px;
+  height: 24px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3160ms -1284ms linear infinite;
+          animation: bubbles 3160ms -1284ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(6) {
+  left: 21px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 4684ms -6115ms linear infinite;
+          animation: bubbles 4684ms -6115ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(7) {
+  left: -28px;
+  width: 22px;
+  height: 22px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 4087ms -1145ms linear infinite;
+          animation: bubbles 4087ms -1145ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(8) {
+  left: -16px;
+  width: 26px;
+  height: 26px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5823ms -6238ms linear infinite;
+          animation: bubbles 5823ms -6238ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(9) {
+  left: 19px;
+  width: 22px;
+  height: 22px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6685ms -4147ms linear infinite;
+          animation: bubbles 6685ms -4147ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(10) {
+  left: -35px;
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6212ms -5160ms linear infinite;
+          animation: bubbles 6212ms -5160ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(11) {
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5466ms -4238ms linear infinite;
+          animation: bubbles 5466ms -4238ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(12) {
+  left: -14px;
+  width: 17px;
+  height: 17px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3596ms -1141ms linear infinite;
+          animation: bubbles 3596ms -1141ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(13) {
+  left: 12px;
+  width: 19px;
+  height: 19px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 4135ms -6972ms linear infinite;
+          animation: bubbles 4135ms -6972ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(14) {
+  left: -19px;
+  width: 13px;
+  height: 13px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5427ms -2776ms linear infinite;
+          animation: bubbles 5427ms -2776ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(15) {
+  left: 34px;
+  width: 19px;
+  height: 19px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3757ms -3853ms linear infinite;
+          animation: bubbles 3757ms -3853ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(16) {
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6171ms -6192ms linear infinite;
+          animation: bubbles 6171ms -6192ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(17) {
+  left: 0px;
+  width: 13px;
+  height: 13px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5809ms -1063ms linear infinite;
+          animation: bubbles 5809ms -1063ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(18) {
+  left: -18px;
+  width: 24px;
+  height: 24px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5800ms -4942ms linear infinite;
+          animation: bubbles 5800ms -4942ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(19) {
+  left: -15px;
+  width: 21px;
+  height: 21px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6658ms -3851ms linear infinite;
+          animation: bubbles 6658ms -3851ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(20) {
+  left: 25px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3767ms -5734ms linear infinite;
+          animation: bubbles 3767ms -5734ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(21) {
+  left: -3px;
+  width: 19px;
+  height: 19px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6799ms -1417ms linear infinite;
+          animation: bubbles 6799ms -1417ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(22) {
+  left: -30px;
+  width: 26px;
+  height: 26px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 4527ms -3943ms linear infinite;
+          animation: bubbles 4527ms -3943ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(23) {
+  left: 33px;
+  width: 19px;
+  height: 19px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5771ms -9151ms linear infinite;
+          animation: bubbles 5771ms -9151ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(24) {
+  left: -22px;
+  width: 17px;
+  height: 17px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3943ms -4940ms linear infinite;
+          animation: bubbles 3943ms -4940ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(25) {
+  left: 24px;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5041ms -1596ms linear infinite;
+          animation: bubbles 5041ms -1596ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(26) {
+  left: 6px;
+  width: 11px;
+  height: 11px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6825ms -6217ms linear infinite;
+          animation: bubbles 6825ms -6217ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(27) {
+  left: 25px;
+  width: 19px;
+  height: 19px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5396ms -9866ms linear infinite;
+          animation: bubbles 5396ms -9866ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(28) {
+  left: 35px;
+  width: 17px;
+  height: 17px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3553ms -7813ms linear infinite;
+          animation: bubbles 3553ms -7813ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(29) {
+  left: 23px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6806ms -3796ms linear infinite;
+          animation: bubbles 6806ms -3796ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(30) {
+  left: -35px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3230ms -626ms linear infinite;
+          animation: bubbles 3230ms -626ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(31) {
+  left: 2px;
+  width: 23px;
+  height: 23px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6708ms -8016ms linear infinite;
+          animation: bubbles 6708ms -8016ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(32) {
+  left: -16px;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6242ms -1895ms linear infinite;
+          animation: bubbles 6242ms -1895ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(33) {
+  left: 23px;
+  width: 13px;
+  height: 13px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6335ms -7531ms linear infinite;
+          animation: bubbles 6335ms -7531ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(34) {
+  left: 38px;
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6648ms -5997ms linear infinite;
+          animation: bubbles 6648ms -5997ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(35) {
+  left: -11px;
+  width: 29px;
+  height: 29px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 6931ms -6654ms linear infinite;
+          animation: bubbles 6931ms -6654ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(36) {
+  left: 8px;
+  width: 27px;
+  height: 27px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 4975ms -6403ms linear infinite;
+          animation: bubbles 4975ms -6403ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(37) {
+  left: -5px;
+  width: 18px;
+  height: 18px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3823ms -1821ms linear infinite;
+          animation: bubbles 3823ms -1821ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(38) {
+  left: -18px;
+  width: 22px;
+  height: 22px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 5165ms -9927ms linear infinite;
+          animation: bubbles 5165ms -9927ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(39) {
+  left: -28px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3645ms -8813ms linear infinite;
+          animation: bubbles 3645ms -8813ms linear infinite;
+}
+.blowing-bubbles .bubble:nth-child(40) {
+  left: 38px;
+  width: 26px;
+  height: 26px;
+  border-top: 1px solid #AFD2F7;
+  border-radius: 100%;
+  -webkit-animation: bubbles 3392ms -9825ms linear infinite;
+          animation: bubbles 3392ms -9825ms linear infinite;
+}
+
+@-webkit-keyframes bubbles {
+  0% {
+    transform: translateY(400px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes bubbles {
+  0% {
+    transform: translateY(400px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+.fish-body .scale {
+  position: static;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 100px;
+  -webkit-animation: fishColor 1000ms linear infinite alternate;
+          animation: fishColor 1000ms linear infinite alternate;
+}
+.fish-body .scale.-top.-front {
+  transform: scale(1, 1) skewX(4.5deg) rotateY(-11deg) rotateX(23deg) translate(1.5px, 2.5px);
+}
+.fish-body .scale.-top.-back {
+  transform: scale(-1, 1) skewX(4.5deg) rotateY(-11deg) rotateX(23deg) translate(1.5px, 2.5px);
+}
+.fish-body .scale.-bottom.-front {
+  transform: scale(1, -1) skewX(4.5deg) rotateY(-11deg) rotateX(23deg) translate(1.5px, 2.5px);
+}
+.fish-body .scale.-bottom.-back {
+  transform: scale(-1, -1) skewX(4.5deg) rotateY(-11deg) rotateX(23deg) translate(1.5px, 2.5px);
+}
+.fish-body > .half {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 100px;
+}
+.fish-body > .half.-left {
+  transform: translateZ(-1px);
+}
+.fish-body > .half.-left .scale.-top.-front {
+  -webkit-animation-delay: -200ms;
+          animation-delay: -200ms;
+}
+.fish-body > .half.-left .scale.-top.-back {
+  -webkit-animation-delay: -400ms;
+          animation-delay: -400ms;
+}
+.fish-body > .half.-left .scale.-bottom.-front {
+  -webkit-animation-delay: -600ms;
+          animation-delay: -600ms;
+}
+.fish-body > .half.-left .scale.-bottom.-back {
+  -webkit-animation-delay: -800ms;
+          animation-delay: -800ms;
+}
+.fish-body > .half.-right {
+  transform: scaleZ(-1) translateZ(-1px);
+}
+.fish-body > .half.-right .scale.-top.-front {
+  -webkit-animation-delay: -1000ms;
+          animation-delay: -1000ms;
+}
+.fish-body > .half.-right .scale.-top.-back {
+  -webkit-animation-delay: -1200ms;
+          animation-delay: -1200ms;
+}
+.fish-body > .half.-right .scale.-bottom.-front {
+  -webkit-animation-delay: -1400ms;
+          animation-delay: -1400ms;
+}
+.fish-body > .half.-right .scale.-bottom.-back {
+  -webkit-animation-delay: -1600ms;
+          animation-delay: -1600ms;
+}
+
+.fish-tail {
+  top: 10px;
+  left: -30px;
+  transform-origin: 100% 50%;
+  -webkit-animation: fishMotion 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+          animation: fishMotion 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+}
+.fish-tail > .scale {
+  position: static;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 30px;
+  -webkit-animation: fishColor 1000ms linear infinite alternate;
+          animation: fishColor 1000ms linear infinite alternate;
+}
+.fish-tail > .scale.-top {
+  transform: scale(-1, 1);
+}
+.fish-tail > .scale.-bottom {
+  transform: scale(-1, -1);
+  -webkit-animation-delay: -200ms;
+          animation-delay: -200ms;
+}
+
+.swiming-fishes .rotate {
+  width: 400px;
+  transform-origin: 0 0;
+  -webkit-animation: rotateY 10000ms linear infinite;
+          animation: rotateY 10000ms linear infinite;
+}
+.swiming-fishes .swim:nth-child(1) .rotate {
+  width: 745px;
+  -webkit-animation-delay: -3532ms;
+          animation-delay: -3532ms;
+  -webkit-animation-duration: 13245ms;
+          animation-duration: 13245ms;
+}
+.swiming-fishes .swim:nth-child(1) .depth {
+  transform: translateY(-286px);
+}
+.swiming-fishes .swim:nth-child(1) .shadow {
+  transform: translate(-50px, 486px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(1) .fish {
+  -webkit-animation-delay: -2220ms;
+          animation-delay: -2220ms;
+}
+.swiming-fishes .swim:nth-child(1) .fish-tail {
+  -webkit-animation-delay: -1920ms;
+          animation-delay: -1920ms;
+}
+.swiming-fishes .swim:nth-child(2) .rotate {
+  width: 457px;
+  -webkit-animation-delay: -8722ms;
+          animation-delay: -8722ms;
+  -webkit-animation-duration: 8348ms;
+          animation-duration: 8348ms;
+}
+.swiming-fishes .swim:nth-child(2) .depth {
+  transform: translateY(-475px);
+}
+.swiming-fishes .swim:nth-child(2) .shadow {
+  transform: translate(-50px, 675px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(2) .fish {
+  -webkit-animation-delay: -1115ms;
+          animation-delay: -1115ms;
+}
+.swiming-fishes .swim:nth-child(2) .fish-tail {
+  -webkit-animation-delay: -815ms;
+          animation-delay: -815ms;
+}
+.swiming-fishes .swim:nth-child(3) .rotate {
+  width: 311px;
+  -webkit-animation-delay: -5176ms;
+          animation-delay: -5176ms;
+  -webkit-animation-duration: 13835ms;
+          animation-duration: 13835ms;
+}
+.swiming-fishes .swim:nth-child(3) .depth {
+  transform: translateY(-534px);
+}
+.swiming-fishes .swim:nth-child(3) .shadow {
+  transform: translate(-50px, 734px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(3) .fish {
+  -webkit-animation-delay: -1363ms;
+          animation-delay: -1363ms;
+}
+.swiming-fishes .swim:nth-child(3) .fish-tail {
+  -webkit-animation-delay: -1063ms;
+          animation-delay: -1063ms;
+}
+.swiming-fishes .swim:nth-child(4) .rotate {
+  width: 273px;
+  -webkit-animation-delay: -6776ms;
+          animation-delay: -6776ms;
+  -webkit-animation-duration: 8202ms;
+          animation-duration: 8202ms;
+}
+.swiming-fishes .swim:nth-child(4) .depth {
+  transform: translateY(-171px);
+}
+.swiming-fishes .swim:nth-child(4) .shadow {
+  transform: translate(-50px, 371px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(4) .fish {
+  -webkit-animation-delay: -1899ms;
+          animation-delay: -1899ms;
+}
+.swiming-fishes .swim:nth-child(4) .fish-tail {
+  -webkit-animation-delay: -1599ms;
+          animation-delay: -1599ms;
+}
+.swiming-fishes .swim:nth-child(5) .rotate {
+  width: 757px;
+  -webkit-animation-delay: -427ms;
+          animation-delay: -427ms;
+  -webkit-animation-duration: 10272ms;
+          animation-duration: 10272ms;
+}
+.swiming-fishes .swim:nth-child(5) .depth {
+  transform: translateY(-169px);
+}
+.swiming-fishes .swim:nth-child(5) .shadow {
+  transform: translate(-50px, 369px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(5) .fish {
+  -webkit-animation-delay: -609ms;
+          animation-delay: -609ms;
+}
+.swiming-fishes .swim:nth-child(5) .fish-tail {
+  -webkit-animation-delay: -309ms;
+          animation-delay: -309ms;
+}
+.swiming-fishes .swim:nth-child(6) .rotate {
+  width: 278px;
+  -webkit-animation-delay: -9091ms;
+          animation-delay: -9091ms;
+  -webkit-animation-duration: 12419ms;
+          animation-duration: 12419ms;
+}
+.swiming-fishes .swim:nth-child(6) .depth {
+  transform: translateY(-215px);
+}
+.swiming-fishes .swim:nth-child(6) .shadow {
+  transform: translate(-50px, 415px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(6) .fish {
+  -webkit-animation-delay: -1320ms;
+          animation-delay: -1320ms;
+}
+.swiming-fishes .swim:nth-child(6) .fish-tail {
+  -webkit-animation-delay: -1020ms;
+          animation-delay: -1020ms;
+}
+.swiming-fishes .swim:nth-child(7) .rotate {
+  width: 388px;
+  -webkit-animation-delay: -525ms;
+          animation-delay: -525ms;
+  -webkit-animation-duration: 13523ms;
+          animation-duration: 13523ms;
+}
+.swiming-fishes .swim:nth-child(7) .depth {
+  transform: translateY(-637px);
+}
+.swiming-fishes .swim:nth-child(7) .shadow {
+  transform: translate(-50px, 837px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(7) .fish {
+  -webkit-animation-delay: -1461ms;
+          animation-delay: -1461ms;
+}
+.swiming-fishes .swim:nth-child(7) .fish-tail {
+  -webkit-animation-delay: -1161ms;
+          animation-delay: -1161ms;
+}
+.swiming-fishes .swim:nth-child(8) .rotate {
+  width: 447px;
+  -webkit-animation-delay: -4619ms;
+          animation-delay: -4619ms;
+  -webkit-animation-duration: 13107ms;
+          animation-duration: 13107ms;
+}
+.swiming-fishes .swim:nth-child(8) .depth {
+  transform: translateY(-552px);
+}
+.swiming-fishes .swim:nth-child(8) .shadow {
+  transform: translate(-50px, 752px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(8) .fish {
+  -webkit-animation-delay: -1806ms;
+          animation-delay: -1806ms;
+}
+.swiming-fishes .swim:nth-child(8) .fish-tail {
+  -webkit-animation-delay: -1506ms;
+          animation-delay: -1506ms;
+}
+.swiming-fishes .swim:nth-child(9) .rotate {
+  width: 782px;
+  -webkit-animation-delay: -8306ms;
+          animation-delay: -8306ms;
+  -webkit-animation-duration: 8591ms;
+          animation-duration: 8591ms;
+}
+.swiming-fishes .swim:nth-child(9) .depth {
+  transform: translateY(-5px);
+}
+.swiming-fishes .swim:nth-child(9) .shadow {
+  transform: translate(-50px, 205px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(9) .fish {
+  -webkit-animation-delay: -1773ms;
+          animation-delay: -1773ms;
+}
+.swiming-fishes .swim:nth-child(9) .fish-tail {
+  -webkit-animation-delay: -1473ms;
+          animation-delay: -1473ms;
+}
+.swiming-fishes .swim:nth-child(10) .rotate {
+  width: 410px;
+  -webkit-animation-delay: -1440ms;
+          animation-delay: -1440ms;
+  -webkit-animation-duration: 9472ms;
+          animation-duration: 9472ms;
+}
+.swiming-fishes .swim:nth-child(10) .depth {
+  transform: translateY(-459px);
+}
+.swiming-fishes .swim:nth-child(10) .shadow {
+  transform: translate(-50px, 659px) rotateX(90deg);
+}
+.swiming-fishes .swim:nth-child(10) .fish {
+  -webkit-animation-delay: -2184ms;
+          animation-delay: -2184ms;
+}
+.swiming-fishes .swim:nth-child(10) .fish-tail {
+  -webkit-animation-delay: -1884ms;
+          animation-delay: -1884ms;
+}
+
+.fish-component {
+  top: -50px;
+  right: 0;
+  transform: rotateY(90deg) translateX(-100px);
+}
+.fish-component .fish {
+  transform-origin: 100px 50px;
+  -webkit-animation: fishMotion 500ms -200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+          animation: fishMotion 500ms -200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+}
+.fish-component .shadow {
+  width: 300px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(25, 44, 84, 0.2) 10%, rgba(14, 71, 145, 0) 50%);
+}
+
+@-webkit-keyframes rotateX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotateX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+@-webkit-keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes rotateZ {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rotateZ {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes fishColor {
+  0% {
+    border-color: transparent transparent #6C99C6 transparent;
+  }
+  100% {
+    border-color: transparent transparent #1A5AB6 transparent;
+  }
+}
+@keyframes fishColor {
+  0% {
+    border-color: transparent transparent #6C99C6 transparent;
+  }
+  100% {
+    border-color: transparent transparent #1A5AB6 transparent;
+  }
+}
+@-webkit-keyframes fishMotion {
+  0% {
+    transform: rotateY(20deg);
+  }
+  100% {
+    transform: rotateY(-20deg);
+  }
+}
+@keyframes fishMotion {
+  0% {
+    transform: rotateY(20deg);
+  }
+  100% {
+    transform: rotateY(-20deg);
+  }
+}
+    
+    </style>
+    <div class="camera -x">
+  <div class="camera -y">
+    <div class="camera -z">
+      <div class="under-sea">
+        <div class="blowing-bubbles">
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+        </div>
+        <div class="swiming-fishes">
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swim">
+            <div class="depth">
+              <div class="rotate">
+                <div class="fish-component">
+                  <div class="shadow"></div>
+                  <div class="fish">
+                    <div class="fish-body">
+                      <div class="half -left">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                      <div class="half -right">
+                        <div class="scale -top -front"></div>
+                        <div class="scale -top -back"></div>
+                        <div class="scale -bottom -front"></div>
+                        <div class="scale -bottom -back"></div>
+                      </div>
+                    </div>
+                    <div class="fish-tail">
+                      <div class="scale -top"></div>
+                      <div class="scale -bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
