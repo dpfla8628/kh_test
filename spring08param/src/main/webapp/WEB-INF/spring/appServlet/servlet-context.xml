@@ -8,6 +8,7 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- 
+		1.Annotation 방식
 		컨트롤러를 한땀한땀 등록하려니 손가락이 아프다
 		= 패키지를 지정하고 자동으로 등록될 수 있도록 감시하자! 
 		= 컨트롤러를 등록하는 설정을 하는 것이 아니라 패키지를 감시하는 설정을 수행
@@ -16,6 +17,7 @@
 	<context:component-scan base-package="com.kh.spring08"></context:component-scan>
 	
 	<!-- 
+		2. bean 방식(객체생성)
 		뷰 리졸버(View Resolver)
 		= 컨트롤러에서 반환되는 주소에 자동으로 접두사, 접미사를 추가하는 도구
 		= 접두사를 prefix , 접미사를 suffix라고 부른다
@@ -26,5 +28,48 @@
 	 	<beans:property name="prefix" value="/WEB-INF/views/"></beans:property>
 	 	<beans:property name="suffix" value=".jsp"></beans:property>
 	 </beans:bean>
-	
+	 
+	 <!-- 
+	 	1.연결 도구
+	 	데이터베이스 연결을 담당하는 객체를 등록
+	 	= 연결 신규 생성 방식
+	 	= 연결 풀 방식(DBDP. DataBase Connection Pool 방식)
+	 	= 스프링에서 제공하는 클래스이므로 Annotation으로 등록이 불가하여 bean 설정을 직접 수행
+	 	= 직접 작성하거나 파일을 찾아서 copy qulified name 선택
+	 	= Connection 연결 도구
+	 	
+	 	상위  : DataSource -jdbc/dbcp
+	 	(jdbc/dbcp는 pom.xml에서 의존성 등록 먼저하기~)
+	  -->
+	  <beans:bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	  	<beans:property name="driverClassName" value="oracle.jdbc.OracleDriver"></beans:property>
+	  	<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></beans:property>
+	  	<beans:property name="username" value="web"></beans:property>
+	  	<beans:property name="password" value="web"></beans:property>
+	  </beans:bean>
+	 
+	 <beans:bean id="dataSource2" class="org.apache.commons.dbcp2.BasicDataSource">
+	 	<beans:property name="driverClassName" value="oracle.jdbc.OracleDriver"></beans:property>
+	  	<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></beans:property>
+	  	<beans:property name="username" value="web"></beans:property>
+	  	<beans:property name="password" value="web"></beans:property>
+	  	<beans:property name="maxTotal" value="20"></beans:property>
+	 	<beans:property name="minIdle" value="5"></beans:property>
+	 	<beans:property name="maxIdle" value="5"></beans:property>
+	 	<beans:property name="maxWaitMillis" value="3000"></beans:property>
+	 </beans:bean>
+	 
+	 
+	 <!-- 
+	 	2.명령 전송 도구
+	 	Spring에서는 데이터베이스 명령 전송도 자체적으로 제공되는 도구를 등록하여 사용한다.
+	 	= PreparedStatement대신 사용할 수 있는 도구
+	 	= JdbcTemplate
+	 	= reference 설정으로 데이터베이스 연결 객체를 주입해야 한다.
+	  -->
+	<beans:bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<beans:property name="dataSource" ref="dataSource2"></beans:property>
+	</beans:bean>	
+
+
 </beans:beans>

@@ -68,8 +68,8 @@
 			<%if(!isLogin){ %>
 			<!-- 비회원이 마주할 메뉴 -->
 			<a href="<%=request.getContextPath()%>">홈으로</a>
-			<a href="<%=request.getContextPath()%>/member/join.jsp">회원가입</a>
-			<a href="<%=request.getContextPath()%>/member/login.jsp">로그인</a>
+			<a href="<%=request.getContextPath()%>/member/join">회원가입</a>
+			<a href="<%=request.getContextPath()%>/member/login">로그인</a>
 			<a href="<%=request.getContextPath()%>/board/list.jsp">게시판</a>
 			<%}else{ %>
 			<!-- 회원이 마주할 메뉴 -->
