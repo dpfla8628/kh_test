@@ -3,18 +3,24 @@ import java.util.Scanner;
 public class test {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String a = sc.next();
-		for(int i=0; i<a.length(); i++) {
-		switch(a.charAt(i)){
-			case 'A' : case 'B': case 'C': 2
-			case 'D' : case 'E': case 'F': 3
-			case 'G' : case 'H': case 'I': 4
-			case 'J' : case 'K': case 'L': 5
-			case 'M' : case 'N': case 'O': 6
-			case 'P' : case 'Q': case 'R': case 'S': 7
-			case 'T' : case 'U': case 'V': 8
-			case 'W' : case 'X': case 'Y': case 'Z': 9
+		int num = sc.nextInt();
+		int count=num;
+		for(int i=0; i<num; i++) {
+			String a = sc.next();
+			for(int k=0; k<a.length();k++) {
+				if(a.length()<3) {
+					count+=0;
+					break;
+				}
+				for(int j=k+2; j<a.length(); j++) {
+					if(a.charAt(k)!=a.charAt(k+1) && a.charAt(k)==a.charAt(j)) {
+							count--;
+							k=a.length();
+							break;
+						}
+					}	
+			}
 		}
-		}
+		System.out.println(count);
 	}
 }

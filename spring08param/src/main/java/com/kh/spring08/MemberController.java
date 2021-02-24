@@ -1,5 +1,7 @@
 package com.kh.spring08;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -50,12 +52,16 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String login(@ModelAttribute MemberDto memberDto) throws Exception {
+	public String login(@ModelAttribute MemberDto memberDto, HttpSession session) throws Exception {
 		System.out.println("id = " + memberDto.getMember_id());
 		System.out.println("pw = " + memberDto.getMember_pw());
 		
 		boolean result = memberDao.login(memberDto);
 		if(result) {
+			MemberDto loginUser = memberDao.find(memberDto.getMember_id());
+			session.setAttribute("check", loginUser.getMember_id());
+			session.setAttribute("check", loginUser.getMember_auth());
+			
 			return "redirect:/";//최상위 경로(절대경로)
 	//		return "redirect:login";//로그인페이지(상대경로)
 		}
