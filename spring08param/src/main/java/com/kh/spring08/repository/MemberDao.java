@@ -10,6 +10,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.kh.spring08.entity.MemberDto;
+import com.kh.spring08.entity.MemberRankVO;
 
 //repository를 등록해봤자 안되니까 쓰지말자
 

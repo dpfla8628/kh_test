@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+<!--  <context:component-scan base-package="spring.di.ui"/>
+-->
+<!-- Exam exam = new NewlecExam(); -->
+<!-- <bean id="exam1" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10"/>
+<bean id="exam2" class="spring.di.entity.NewlecExam" p:kor="20" p:eng="20"/> -->
+<!-- <bean id="exam" class="spring.di.entity.NewlecExam">
+	<constructor-arg name="kor" value="10"/>
+	<constructor-arg name="eng" value="20"/>
+	<constructor-arg name="com" value="30"/>
+	<constructor-arg name="math" value="40"/>
+</bean> -->
+
+<!-- ExamConsole console = new InlineExamConsole(exam); -->
+<!-- ExamConsole console = new GridExamConsole(exam); -->
+<!-- 위 두 가지를 이곳에서 변경해서 넣으면 program에서 소스를 바꿀 필요가 없음! -->
+<!-- <bean id = "console" class="spring.di.ui.InlineExamConsole" >-->
+
+	<!-- console.setExam(exam) set생략 대문자는 소문자로 -->
+	<!-- <property name="exam" ref="exam" />-->
+<!-- </bean> -->
+
+<!-- 	<util:list id = "exams" list-class="java.util.ArrayList">
+	Collection
+		<bean class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10"/>
+		<ref bean="exam"/>
+	</util:list> -->
+
+<!-- 	<bean id = "exams" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+			Collection
+				<bean class="spring.di.entity.NewlecExam" p:kor="10" p:eng="10"/>
+				<ref bean="exam"/>
+			</list>
+		</constructor-arg>
+	</bean> -->
+
+</beans>

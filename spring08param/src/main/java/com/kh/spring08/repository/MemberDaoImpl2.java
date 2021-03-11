@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 
 import com.kh.spring08.entity.*;
 
-@Repository
+//@Repository
 public class MemberDaoImpl2 implements MemberDao{
 	
 	//이 클래스는 작업을 수행하기 위해 등록된 spring bean 중에서 jdbcTemplate이 필요하다.
@@ -24,6 +24,9 @@ public class MemberDaoImpl2 implements MemberDao{
 	// = 연결과 종료코드가 사라진다
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
 
 	@Override
 	public void insert(MemberDto dto) throws Exception {

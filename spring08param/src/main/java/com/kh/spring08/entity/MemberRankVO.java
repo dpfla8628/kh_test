@@ -1,4 +1,4 @@
-package com.kh.spring08.repository;
+package com.kh.spring08.entity;
 
 import java.sql.Date;
 

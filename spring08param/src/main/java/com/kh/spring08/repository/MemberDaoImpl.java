@@ -10,6 +10,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.kh.spring08.entity.MemberDto;
+import com.kh.spring08.entity.MemberRankVO;
 
 //MemberDao를 Spring이 생성할 수 있도록 등록한다.
 //= @Controller로 등록해야 하나? 요청을 받지 않으므로 @Controller는 아니다.

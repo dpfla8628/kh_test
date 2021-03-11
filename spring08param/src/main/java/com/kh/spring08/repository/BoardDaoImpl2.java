@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import com.kh.spring08.entity.BoardDto;
 import com.kh.spring08.entity.BoardReplyCountVO;
 
-@Repository
+//@Repository
 public class BoardDaoImpl2 implements BoardDao{
 	
 	@Autowired

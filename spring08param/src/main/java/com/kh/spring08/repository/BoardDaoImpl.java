@@ -6,9 +6,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.kh.spring08.entity.BoardDto;
 import com.kh.spring08.entity.BoardReplyCountVO;
 
+@Repository
 public class BoardDaoImpl{
 	
 	public static final String USERNAME = "web";

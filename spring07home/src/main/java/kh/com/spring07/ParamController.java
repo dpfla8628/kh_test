@@ -1,4 +1,4 @@
-package com.kh.spring08;
+package kh.com.spring07;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.kh.spring08.entity.Student;
 
 @Controller
 @RequestMapping("/param")

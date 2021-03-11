@@ -2,7 +2,6 @@
 
 <!-- 
 	이 파일에는 프로젝트의 정보가 들어간다.
-	필요한 의존성이 있는지 확인하자! (ojdbc8모듈, spring-jdbc모듈...)
 	project 태그 내에 설정하도록 되어 있다.
 	자동완성이나 문법검사를 위해 주소 형태(CDN)로 양식을 제공하며, 이를 xmlns라고 부른다. 
 	xmlns는 XML NameSpace의 줄임말이다.
@@ -21,8 +20,8 @@
 	-->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kh</groupId>
-	<artifactId>spring07</artifactId>
-	<name>spring07home</name>
+	<artifactId>spring08</artifactId>
+	<name>spring08main</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
@@ -43,7 +42,7 @@
 		= 여기에 의존성 정보를 작성하면 Maven이 자동으로 다운로드를 받는다.
 		= 더이상 직접 라이브러리를 다운받아서 추가할 필요가 없다.
 		= 기본적으로 Maven은 사용자 폴더에 .m2라는 폴더를 만들고 의존성을 다운로드 한다.
-		= 필요하다면 우리가 원하는 위치로 변경할 수 있어야 하며, 변경해야 충돌이 발생하지 않는다.ㄴ
+		= 필요하다면 우리가 원하는 위치로 변경할 수 있어야 하며, 변경해야 충돌이 발생하지 않는다.
 	 -->
 	 
 	<dependencies>
@@ -147,12 +146,20 @@
 		</dependency>
 	
 		<!-- Test -->
+		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
-		</dependency>       
+		</dependency>      
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${org.springframework-version}</version>
+		    <scope>test</scope>
+		</dependency>
 		
 		<!-- 오라클 드라이버 의존성 -->
 		<dependency>
@@ -161,7 +168,7 @@
 		    <version>21.1.0.0</version>
 		</dependency>
 		
-		<!-- spring jdbc 의존성 -->
+		<!-- 스프링 JDBC 의존성 -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-jdbc</artifactId>
@@ -173,11 +180,24 @@
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-dbcp2</artifactId>
 		    <version>2.8.0</version>
+		</dependency>  
+		
+		<!-- mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.5.6</version>
+		</dependency>
+		<!-- mybatis-spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>2.0.6</version>
 		</dependency>
 		
-
-				 
-				 
+		
+		
+		
 	</dependencies>
 	
 	<!-- 
