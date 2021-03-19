@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<settings>
+		<!-- 표기 방식에서 camel_case, CamelCase 형식을 허용 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	<typeAliases>
+	<!-- 
+	<typeAlias type="com.dongho.vo.MemberVO" alias="MemberVO" />
+		클래스 별로 설정하는 방법 대신 패키지로 설정하면 더 편리함 @Alias로 지정해서 사용 가능	
+	 -->
+		<package name="com.example.demo.entity"/>
+	</typeAliases>
+</configuration>
